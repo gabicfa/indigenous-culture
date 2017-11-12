@@ -1,0 +1,99 @@
+-
+Adorno
+Alargador
+Bandoleira
+Braçadeira
+Brinco
+Cabeça
+Cinto
+Diversos
+Saia
+Tanga
+-
+Arma
+Machado
+Arco
+Borduna
+Diversos
+Lança
+Zarabatana
+-
+Arte Figurativa
+Boneca
+Cerâmica
+Desenho
+Látex
+Madeira
+Miniaturas de Animais
+Cachimbo
+Banco
+Bolsa
+-
+Cerâmica
+Cumbuca
+Diversas
+Panela
+Prato
+Zoomorfa
+-
+Cesto
+Balaio
+Cesto Cargueiro
+Cesto com Tampa
+Cesto de Pesca
+Cesto Decorado
+Cesto Liso
+-
+Colar
+Colar com Figuras de Animais
+Colar de Contas
+Colar de Miçangas
+Colar de Sementes
+Colares Diversos
+Várias Voltas de Contas
+Várias Voltas de Miçangas
+Várias Voltas de Sementes
+-
+Diversos
+Cuia
+Coité
+Cabaça
+Aspirador de Rapé
+Brinquedo
+Canoa
+Carregador de Bebê
+Espátula
+Ferramentas
+Grafismo
+Objeto Cerimonial
+Objetos para Tecelagem
+Pente
+Preparação de Alimentos
+Máscara
+Rede
+Remo
+-
+Instrumento Musical
+Bastão de Ritmo
+Apito
+Buzina
+Chocalho de amarrar
+Flauta
+Maracá
+Pau de chuva
+Zunidor
+-
+Pulseira
+Pulseira de Contas
+Pulseira de Miçangas
+Pulseira de Sementes
+Pulseiras Diversas
+Pulseira para Bebês
+Pulseira Trançada
+-
+Trançados
+Diversos
+Esteira
+Peneira
+Preparação de Alimentos
+.

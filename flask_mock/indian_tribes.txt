@@ -1,0 +1,170 @@
+Aicanãs	Aicanã	Roraima
+Ajurus	Tupari	Rondônia
+Amanaiés	Tupi-guarani	Pará
+Anambés	Tupi-Guarani	Pará
+Aparai	Karíb	Pará
+Apiacás	Apiacá	Mato Grosso
+Apurinã	Aruák	Amazonas
+Arapaso	Tucano	Amazonas
+Arara	Karíb	Pará
+Arara	Pano	Acre
+Araras-do-aripuanã	Tupi-Arara	Mato Grosso
+Aruás	Língua aruá	Rondônia
+Campas	Aruák	Acre e Peru
+Assurinis-do-tocantins	Tupi-Guarani	Pará
+Assurinis-do-xingu	Tupi-Guarani	Pará
+Avás-canoeiros	Tupi-Guarani	Tocantins e Goiás
+Guajás	Tupi-Guarani	Maranhão
+Auetis	Língua aueti	Mato Grosso
+Bacairis	Karíb	Mato Grosso
+Barás	Tukano	Amazonas  
+Barasanas	Tukano	Amazonas  
+Baré	Nheengatu	Amazonas  
+Bororos	Bororo	Mato Grosso
+Chamacocos	Samuko	Mato Grosso do Sul
+Chiquitanos	Chiquito	Mato Grosso
+Cintas-largas	Tupi Mondé	Rondônia e Mato Grosso
+Denis	Arawá	Amazonas
+Desanos	Tukano	Amazonas  
+Enáuenês-nauês	Aruák	Mato Grosso
+Fulniôs	Yatê	Pernambuco
+Gavião Mondé	Mondé	Rondônia
+Paracatejê-gavião	Timbira Oriental	Pará
+Pucobié-gavião	Jê	Maranhão
+Guajajaras	Tupi-Guarani	Maranhão
+Guaranis	Tupi-Guarani	RS/SC/PR/SP/RJ/MS
+Guatós	Guató	Mato Grosso do Sul
+Hupda	Maku	Amazonas  
+Ikpeng	Karib	Mato Grosso
+Ingarikó	Karíb	Roraima
+Jabutis	Jaboti	Rondônia
+Jamamadis	Arawá	Amazonas
+Jarauaras	Arawá	Amazonas
+Javaés	Karajá	Tocantins
+Jiahuis	Tupi-Guarani	Amazonas
+Jumas	Tupi-Guarani	Amazonas
+Kaapor	Tupi-Guarani	Maranhão
+Caiabis	Tupi-Guarani	Mato Grosso e Pará
+Caingangues	Jê	São Paulo, Paraná e Santa Catarina
+Caixanas	Português	Amazonas
+Calapalos	Karíb	Mato Grosso
+Camaiurás	Tupi-Guarani	Mato Grosso
+Cambebas	Tupi-Guarani	Amazonas
+Cambiuás	Português	Pernambuco
+Canamaris	Katukina	Amazonas
+Apaniecras-canelas	Jê	Maranhão
+Rancocamecras-canelas	Jê	Maranhão
+Canindés	Português	Ceará
+Canoês	Kanoê	Rondônia
+Carajá	Karajá	Mato Grosso, Tocantins
+Karapanã	Tukano	Amazonas
+Karapotó	Português	Alagoas
+Karipuna	Tupi-Guarani	Rondônia
+Caripunas-do-amapá	Creoulo Francês	Amapá
+Cariris	Português	Ceará
+Cariris-xocós	Português	Alagoas
+Caritianas	Arikem	Rondônia
+Araras-caros	Ramarama	Rondônia
+Karuazu	Português	Alagoas
+Katukina	Katukina	Amazonas
+Katukina	Pano	Acre e Amazonas
+Katxuyana	Karib	Pará
+Kaxarari	Pano	Amazonas e Rondônia
+Kaxinawá	Pano	Acre e Peru
+Kaxixó	Português	Minas Gerais
+Caiapós	Jê	Mato Grosso
+Quiriris	Português	Bahia
+Cocamas	Tupi-Guarani	Amazonas
+Korubo	Pano	Amazonas
+Craós	Timbira oriental	Tocantins
+Crenaques	Krenak	Minas Gerais
+Cricatis	Jê	Maranhão
+Kubeo	Tukano	Amazonas
+Kuikuro	Karib	Mato Grosso
+Kulina Madihá	Arawá	Acre, Amazonas  
+Culinas-pano	Pano	Amazonas
+Kuripako	Aruak	Amazonas
+Curuaias	Munduruku	Pará
+Kwazá	Kwazá	Rondônia
+Macurap	Tupari	Rondônia
+Makuna	Tukano	Amazonas
+Macuxis	Karib	Roraima
+Matipus	Karib	Mato Grosso
+Matis	 Pano	Amazonas
+Maxacalis	Maxacali	Minas Gerais
+Meinacos	Aruak	Mato Grosso
+Miranha	Bora	Amazonas
+Miritis-tapuias	Tukano	Amazonas
+Mundurucus	Munduruku	Pará
+Muras	Mura	Amazonas
+Nauquás	Karib	Mato Grosso
+Nambiquaras	Nambikwara	Mato Grosso e Rondônia
+Nukini	Pano	Acre
+Ofaiés	Ofaié	Mato Grosso do Sul
+Oro-uins	Txapakura	Rondônia
+Paiter	Mondé	Rondônia
+Palicures	Aruak	Amapá
+Panará	(Krenhakarore) Jê	Mato Grosso e Pará
+Pancararés	Português	Bahia
+Pankararu	Português	Pernambuco
+Pankaru	Português	Bahia
+Parakanã	Tupi Guarani	Pará
+Parecis	Aruak	Mato Grosso
+Parintintins	Tupi-Guarani	Amazonas
+Patamona	Karib	Roraima  
+Pataxó	Português	Bahia
+Pipipãs	Português	Pernambuco
+Pirarrãs	Mura	Amazonas
+Piratapuias	Tukano	Amazonas
+Pitaguaris	Português	Ceará
+Potiguaras	Potiguara e português	Paraíba
+Poianauas	Pano	Acre
+Ricbactas	Rikbaktsa	Mato Grosso
+Sakurabiat	Tupari	Rondônia
+Sateré-Mawé	Mawé	Amazonas e Pará
+Shanenawa	Pano	Acre
+Suruís	Tupi-Guarani	Pará
+Suiás	Jê	Mato Grosso
+Tabajaras	Português	Ceará
+Tapaiúnas	Jê	Mato Grosso
+Tapirapés	Tupi-Guarani	Mato Grosso
+Tapuias	Português	Goiás
+Tarianas	Aruak	Amazonas
+Terenas	Aruak	Mato Grosso do Sul
+Ticunas	Ticuna	Amazonas
+Tiriós	Karíb	Pará
+Torás	Txapakura	Amazonas
+Truká	Português	Pernambuco
+Trumai	Trumai	Mato Grosso
+Tsunhuns-djapás	Katukina	Amazonas
+Tucanos	Tukano	Amazonas
+Tumbalalá	Português	Bahia
+Tuparis	Tupari	Rondônia
+Tupinambás	Português	Bahia
+Tupiniquins	Português	Espírito Santo
+Tuiúcas	Tukano	Amazonas
+Umutinas	Bororo	Mato Grosso
+Amondauas	Tupi-Guarani	Rondônia
+Uaimiris-atroaris	Karib	Roraima e Amazonas
+Uapixanas	Aruak	Roraima
+Uarequenas	Aruak	Amazonas
+Uassus	Português	Alagoas
+Uaurás	Aruak	Mato Grosso
+Uaianas	Karib	Pará
+Xakriabás	Jê	Minas Gerais
+Xambioás	Karajá	Tocantins
+Xavantes	Jê	Mato Grosso
+Xetás	Tupi-Guarani	Paraná
+Caiapós-xicrins	Kayapó	Pará
+Xipaias	Juruna	Pará
+Xukuru	Português	Pernambuco
+Xukuru Kariri	Português	Alagoas
+Yaminawa	Pano	Acre
+Ianomâmis	Yanomami	Roraima, Amazonas
+Iaualapitis	Aruak	Mato Grosso
+Iecuanas	Karib	Roraima
+Jurunas	Juruna	Pará e Mato Grosso
+Zoés	Tupi-Guarani	Pará
+Zorós	Mondé	Mato Grosso
+Suruuarrás	Arawá	Amazonas
+.
