@@ -5,6 +5,10 @@ import Checkbox from 'material-ui/Checkbox';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import Slider from 'material-ui/Slider';
+import AutoComplete from 'material-ui/AutoComplete';
+import tribeAccess from '../actions/tribes'
+import Chip from 'material-ui/Chip';
+import FlatButton from 'material-ui/FlatButton'
 
 const styles = {
     block: {
@@ -32,14 +36,26 @@ const styles = {
         marginBottom: 12,
         fontWeight: 400,
     },
+    chip: {
+        margin: 4,
+      },
       
 }
 
+const menuProps = {
+    desktop: true,
+    disableAutoFocus: true,
+  };
+  
 class SettingsMenu extends Component {
     constructor(props) {
         super(props);
         this.state = {
             firstSlider: 0.5,
+            searchText: '',
+            selected: [],
+            tribes: [],
+
         };
     }
 
@@ -49,6 +65,39 @@ class SettingsMenu extends Component {
         this.setState({firstSlider: value});
       };
     
+    componentWillMount = () => {
+        tribeAccess.getTribes((data) => {
+            var tribe_list = []
+            data.forEach((item) => {
+                tribe_list.push(item[0])
+            })
+            this.setState({tribes: tribe_list})
+        })
+    }
+    handleUpdateInput = (searchText) => {
+        this.setState({
+            searchText: searchText,
+        });
+    }
+    
+    handleAdd = () => {
+        var selected_list = this.state.selected
+        selected_list.push(this.state.searchText)
+        this.setState({selected : selected_list})
+        tribeAccess.emitValue("tribe", this.state.selected)
+    }
+
+     handleRequestDelete = () => {
+        var selected_list = this.state.selected
+        var index = selected_list.indexOf(this.state.searchText)
+        selected_list.splice(index, 1)
+        this.setState({selected : selected_list})
+        tribeAccess.emitValue("tribe", this.state.selected)
+    }
+      
+      handleTouchTap = () => {
+        alert('You clicked the Chip.');
+      }
 
     render() {
             return (
@@ -62,58 +111,35 @@ class SettingsMenu extends Component {
                             labelStyle={styles.labelStyle}                            
                             />
                         </div>
-                        <div style={styles.block}>
+                        <div style={styles.block2}>
                             <h2 style={styles.headline}>Tribes</h2>
-                            <Checkbox
-                            label="Guarani"
-                            style={styles.checkbox}
-                            labelStyle={styles.labelStyle} 
-                            />
-                            <Checkbox
-                            label="Ticuna"
-                            style={styles.checkbox}
-                            labelStyle={styles.labelStyle} 
-                            />
-                            <Checkbox
-                            label="Caingangue"
-                            style={styles.checkbox}
-                            labelStyle={styles.labelStyle} 
-                            />
-                            <Checkbox
-                            label="Macuxi"
-                            style={styles.checkbox}
-                            labelStyle={styles.labelStyle} 
-                            />
-                            <Checkbox
-                            label="Terena"
-                            style={styles.checkbox}
-                            labelStyle={styles.labelStyle} 
-                            />
-                            <Checkbox
-                            label="Guajajara"
-                            style={styles.checkbox}
-                            labelStyle={styles.labelStyle} 
-                            />
-                            <Checkbox
-                            label="Ianomâmi"
-                            style={styles.checkbox}
-                            labelStyle={styles.labelStyle} 
-                            />
-                            <Checkbox
-                            label="Xavanti"
-                            style={styles.checkbox}
-                            labelStyle={styles.labelStyle} 
-                            />
-                            <Checkbox
-                            label="Pataxó"
-                            style={styles.checkbox}
-                            labelStyle={styles.labelStyle} 
-                            />
-                            <Checkbox
-                            label="Potinguara"
-                            style={styles.checkbox}
-                            labelStyle={styles.labelStyle} 
-                            />
+                            {
+                                this.state.tribes.length > 0 ?
+                                <div>
+                                <AutoComplete
+                                floatingLabelText="Tribes"
+                                searchText={this.state.searchText}
+                                onUpdateInput={this.handleUpdateInput}
+                                fullWidth={true}                
+                                menuProps={menuProps}                                
+                                filter={AutoComplete.caseInsensitiveFilter}
+                                openOnFocus={true}
+                                dataSource={this.state.tribes} />
+                                <FlatButton
+                                    label="Add"
+                                    primary={true}
+                                    keyboardFocused={true}
+                                    onClick={this.handleAdd}
+                                />
+                                {this.state.selected.map((tribe) => 
+                                    <Chip
+                                    onRequestDelete={this.handleRequestDelete}
+                                    onClick={this.handleTouchTap}
+                                    style={styles.chip}>
+                                    {tribe}
+                                  </Chip>
+                                )} </div> : null
+                            }
                         </div>
                         <div style={styles.block}>
                             <h2 style={styles.headline}>Materiais</h2>

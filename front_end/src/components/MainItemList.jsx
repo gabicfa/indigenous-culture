@@ -4,6 +4,7 @@ import Chip from 'material-ui/Chip';
 import Avatar from 'material-ui/Avatar';
 import Product from './Product';
 import productAccess from '../actions/product';
+import tribeAccess from '../actions/tribes';
 
 class MainItemList extends Component {
     constructor(props) {
@@ -11,15 +12,23 @@ class MainItemList extends Component {
         this.state = {
             loading: false,
             products: [],
+            filter: [],
         }
     }
 
     componentWillMount = () => {
-        this.getProductList()        
+        this.getProductList()
+        tribeAccess.subscribe("tribe",(res) =>{
+            this.setState({filter : res})
+            productAccess.getFilteredProducts(res,(data) => {
+                console.log(data.products)
+                this.setState({products : data.products})
+            })
+        })   
     }
 
     getProductList = () => {
-        productAccess.getProducts((data) => {
+        productAccess.getFilteredProducts(this.state.filter,(data) => {
             console.log(data.products)
             this.setState({products : data.products})
         })
@@ -34,6 +43,7 @@ class MainItemList extends Component {
             return (
                 <div>
                     <Card>
+                        <CardTitle title="Recomended Products" subtitle={this.state.message} />
                         { getItems() }
                     </Card>
                 </div>

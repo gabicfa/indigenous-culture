@@ -14,7 +14,8 @@ def get_user(conn, name):
     user["email"] = ans[3]
     return user
 
-def get_products(conn):
+def get_products(conn, filters):
+
     query = '''
             SELECT p.id, p.name, p.price, t.id, t.name, c.id, c.name 
             FROM Product p, Product_Category pc, Product_Tribe pt, Tribe t, Category c
@@ -23,11 +24,37 @@ def get_products(conn):
             p.id = pc.id_product AND
             c.id = pc.id_category
             '''
-    products = [list(conn.run(query))]
+    args = []
+    if len(filters["tribe"]) != 0:
+        query += 'AND t.name IN('
+        for i in range(len(filters["tribe"]) - 1):
+            query +=  '%s, '
+        query +=  '%s'
+        query += ')'
+        args.extend(filters["tribe"])
+        print(query)
+        products = conn.runall(query, (args))
+
+    # if len(filters["category"]) != 0:
+    #     query += 'AND c.name IN('
+    #     for i in range(len(filters["category"]) - 1):
+    #         query +=  '%s, '
+    #     query +=  '%s'
+    #     query += ')'
+    #     args.extend(filters["category"])
+    #     print(query)
+    #     products = conn.runall(query, (args))
+
+    else:
+        query += " LIMIT 30"
+        products = conn.runall(query)
+
+    print(query)
+
     product_list = []
     print(products)
-    p = {}
     for i in range(len(products)):
+        p = {}
         p["product_id"] = products[i][0]
         p["product_name"] = products[i][1]
         p["product_price"] = products[i][2]
@@ -37,3 +64,11 @@ def get_products(conn):
         p["category_name"] = products[i][6]
         product_list.append(p)
     return {"products": product_list}
+
+def get_tribes(conn):
+    query = '''
+            SELECT t.name
+            FROM Tribe t
+            '''
+    tribes = conn.runall(query)
+    return tribes

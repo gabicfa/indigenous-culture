@@ -31,7 +31,6 @@ def user_login():
         user = {}
         user['email'] = request_json['email']
         user['password'] = request_json['password']
-
         conn = ConnectionHelper()
         user_db = dao.get_user(conn, user['name'])
         if user:
@@ -43,13 +42,23 @@ def user_login():
 
         return 'Not acceptable', 406
 
-@app.route('/products', methods=['GET'])
+@app.route('/products', methods=['POST'])
 def get_products():
-    if request.method == 'GET':
+    if request.method == 'POST':
+        request_json = request.get_json()
+        filters = request_json["filter"]
         conn = ConnectionHelper()
-        products = dao.get_products(conn)
+        products = dao.get_products(conn, filters)
         print(products)
         return dumps(products), 200
+
+@app.route('/tribes', methods=['GET'])
+def get_tribes():
+    if request.method == 'GET':
+        conn = ConnectionHelper()
+        tribes = dao.get_tribes(conn)
+        print(tribes)
+        return dumps(tribes), 200
 
 @app.route('/r_products', methods=['GET'])
 def get_recomended_products():

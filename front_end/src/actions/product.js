@@ -11,6 +11,26 @@ export default window.product = {
         })
     },
 
+    getFilteredProducts: (filter, callback) => {
+
+        fetch('http://localhost:5000/products', {
+            method: 'POST',
+            body: JSON.stringify({
+                filter: {tribe: filter},
+            }),
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'POST',
+                'Content-Type': 'application/json',
+            }
+        }).then((response) => {
+            if (response.status == 200){
+                response.json().then((data) => {callback(data)})
+            }                                                    
+        })
+    },
+
     getRecomendedProducts: (user_id, callback) => {
         fetch('http://localhost:5000/r_products', {
             method: 'GET',
