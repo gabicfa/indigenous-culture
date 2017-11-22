@@ -19,12 +19,16 @@ class Product extends Component {
         }
     }
 
+    componentDidMount = () => {
+        console.log(this.props.name)
+    }
+
     render() {
         return (
             <div style={styles.block} >
                 <Card>
                     <CardHeader
-                    title={this.props.name}
+                    title={ this.props.name }
                     subtitle={this.props.tribe}
                     actAsExpander={true}
                     showExpandableButton={true}

@@ -7,7 +7,6 @@ Apiacás	Apiacá	Mato Grosso
 Apurinã	Aruák	Amazonas
 Arapaso	Tucano	Amazonas
 Arara	Karíb	Pará
-Arara	Pano	Acre
 Araras-do-aripuanã	Tupi-Arara	Mato Grosso
 Aruás	Língua aruá	Rondônia
 Campas	Aruák	Acre e Peru

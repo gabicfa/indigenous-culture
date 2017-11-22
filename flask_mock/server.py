@@ -44,8 +44,16 @@ def user_login():
         return 'Not acceptable', 406
 
 @app.route('/products', methods=['GET'])
-def user_login():
+def get_products():
     if request.method == 'GET':
         conn = ConnectionHelper()
         products = dao.get_products(conn)
+        print(products)
+        return dumps(products), 200
+
+@app.route('/r_products', methods=['GET'])
+def get_recomended_products():
+    if request.method == 'GET':
+        conn = ConnectionHelper()
+        products = dao.get_rproducts(conn)
         return products, 200

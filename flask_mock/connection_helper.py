@@ -33,8 +33,7 @@ class ConnectionHelper:
         except:
             self.connection.rollback()
         return result
-
-
+    
     def __get_connection_options():
         database = 'indian'
         try:
