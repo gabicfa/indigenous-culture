@@ -47,6 +47,7 @@ def get_products():
     if request.method == 'POST':
         request_json = request.get_json()
         filters = request_json["filter"]
+        print(filters)
         conn = ConnectionHelper()
         products = dao.get_products(conn, filters)
         print(products)
@@ -57,8 +58,14 @@ def get_tribes():
     if request.method == 'GET':
         conn = ConnectionHelper()
         tribes = dao.get_tribes(conn)
-        print(tribes)
         return dumps(tribes), 200
+
+@app.route('/category', methods=['GET'])
+def get_category():
+    if request.method == 'GET':
+        conn = ConnectionHelper()
+        category = dao.get_category(conn)
+        return dumps(category), 200
 
 @app.route('/r_products', methods=['GET'])
 def get_recomended_products():

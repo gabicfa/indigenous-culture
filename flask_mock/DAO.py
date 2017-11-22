@@ -15,7 +15,6 @@ def get_user(conn, name):
     return user
 
 def get_products(conn, filters):
-
     query = '''
             SELECT p.id, p.name, p.price, t.id, t.name, c.id, c.name 
             FROM Product p, Product_Category pc, Product_Tribe pt, Tribe t, Category c
@@ -32,19 +31,18 @@ def get_products(conn, filters):
         query +=  '%s'
         query += ')'
         args.extend(filters["tribe"])
+
+    if len(filters["category"]) != 0:
+        query += ' AND c.name IN('
+        for i in range(len(filters["category"]) - 1):
+            query +=  '%s, '
+        query +=  '%s'
+        query += ')'
+        args.extend(filters["category"])
+
+    if len(filters["tribe"]) != 0 or len(filters["category"]) != 0:
         print(query)
         products = conn.runall(query, (args))
-
-    # if len(filters["category"]) != 0:
-    #     query += 'AND c.name IN('
-    #     for i in range(len(filters["category"]) - 1):
-    #         query +=  '%s, '
-    #     query +=  '%s'
-    #     query += ')'
-    #     args.extend(filters["category"])
-    #     print(query)
-    #     products = conn.runall(query, (args))
-
     else:
         query += " LIMIT 30"
         products = conn.runall(query)
@@ -72,3 +70,11 @@ def get_tribes(conn):
             '''
     tribes = conn.runall(query)
     return tribes
+
+def get_category(conn):
+    query = '''
+            SELECT c.name
+            FROM Category c
+            '''
+    category = conn.runall(query)
+    return category

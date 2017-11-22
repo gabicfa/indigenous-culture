@@ -11,12 +11,11 @@ export default window.product = {
         })
     },
 
-    getFilteredProducts: (filter, callback) => {
-
+    getFilteredProducts: (tribe, category, callback) => {
         fetch('http://localhost:5000/products', {
             method: 'POST',
             body: JSON.stringify({
-                filter: {tribe: filter},
+                filter: {tribe: tribe, category: category},
             }),
             headers: {
                 'Access-Control-Allow-Origin': '*',

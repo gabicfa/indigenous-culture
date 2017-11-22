@@ -7,6 +7,7 @@ import MenuItem from 'material-ui/MenuItem';
 import Slider from 'material-ui/Slider';
 import AutoComplete from 'material-ui/AutoComplete';
 import tribeAccess from '../actions/tribes'
+import categoryAccess from '../actions/category'
 import Chip from 'material-ui/Chip';
 import FlatButton from 'material-ui/FlatButton'
 
@@ -52,10 +53,12 @@ class SettingsMenu extends Component {
         super(props);
         this.state = {
             firstSlider: 0.5,
-            searchText: '',
-            selected: [],
+            searchTextTribe: '',
+            searchTextCategory: '',
+            selectedTribes: [],
+            selectedCategories: [],
             tribes: [],
-
+            categories: [],
         };
     }
 
@@ -73,31 +76,58 @@ class SettingsMenu extends Component {
             })
             this.setState({tribes: tribe_list})
         })
+        categoryAccess.getCategory((data) => {
+            var category_list = []
+            data.forEach((item) => {
+                category_list.push(item[0])
+            })
+            this.setState({categories: category_list})
+        })
+        
     }
-    handleUpdateInput = (searchText) => {
+    handleUpdateInputTribe = (searchText) => {
         this.setState({
-            searchText: searchText,
+            searchTextTribe: searchText,
         });
     }
     
-    handleAdd = () => {
-        var selected_list = this.state.selected
-        selected_list.push(this.state.searchText)
-        this.setState({selected : selected_list})
-        tribeAccess.emitValue("tribe", this.state.selected)
+    handleUpdateInputCategory = (searchText) => {
+        this.setState({
+            searchTextCategory: searchText,
+        });
     }
 
-     handleRequestDelete = () => {
-        var selected_list = this.state.selected
-        var index = selected_list.indexOf(this.state.searchText)
+    handleAddTribes = () => {
+        var selected_list = this.state.selectedTribes
+        selected_list.push(this.state.searchTextTribe)
+        this.setState({selectedTribes : selected_list})
+        tribeAccess.emitValue("tribe", this.state.selectedTribes)
+    }
+    handleRequestDeleteTribe = (text) => {
+        var selected_list = this.state.selectedTribes
+        var index = selected_list.indexOf(text)
         selected_list.splice(index, 1)
-        this.setState({selected : selected_list})
-        tribeAccess.emitValue("tribe", this.state.selected)
+        this.setState({selectedTribes : selected_list})
+        tribeAccess.emitValue("tribe", this.state.selectedTribes)
+    }
+
+    handleAddCategory = () => {
+        var selected_list = this.state.selectedCategories
+        selected_list.push(this.state.searchTextCategory)
+        this.setState({selectedCategories : selected_list})
+        categoryAccess.emitValue("category", this.state.selectedCategories)
+    }
+    handleRequestDeleteCategory = (text) => {
+        var selected_list = this.state.selectedCategories
+        var index = selected_list.indexOf(text)
+        selected_list.splice(index, 1)
+        this.setState({selectedCategories : selected_list})
+        categoryAccess.emitValue("category", this.state.selectedCategories)
     }
       
-      handleTouchTap = () => {
-        alert('You clicked the Chip.');
-      }
+    handleTouchTap = () => {
+    alert('You clicked the Chip.');
+    }
 
     render() {
             return (
@@ -119,21 +149,20 @@ class SettingsMenu extends Component {
                                 <AutoComplete
                                 floatingLabelText="Tribes"
                                 searchText={this.state.searchText}
-                                onUpdateInput={this.handleUpdateInput}
+                                onUpdateInput={this.handleUpdateInputTribe}
                                 fullWidth={true}                
                                 menuProps={menuProps}                                
-                                filter={AutoComplete.caseInsensitiveFilter}
                                 openOnFocus={true}
                                 dataSource={this.state.tribes} />
                                 <FlatButton
                                     label="Add"
                                     primary={true}
                                     keyboardFocused={true}
-                                    onClick={this.handleAdd}
+                                    onClick={this.handleAddTribes}
                                 />
-                                {this.state.selected.map((tribe) => 
+                                {this.state.selectedTribes.map((tribe) => 
                                     <Chip
-                                    onRequestDelete={this.handleRequestDelete}
+                                    onRequestDelete={this.handleRequestDeleteTribe}
                                     onClick={this.handleTouchTap}
                                     style={styles.chip}>
                                     {tribe}
@@ -141,34 +170,35 @@ class SettingsMenu extends Component {
                                 )} </div> : null
                             }
                         </div>
-                        <div style={styles.block}>
-                            <h2 style={styles.headline}>Materiais</h2>
-                            <Checkbox
-                            label="Vasos"
-                            style={styles.checkbox}
-                            labelStyle={styles.labelStyle} 
+                        <div style={styles.block2}>
+                        <h2 style={styles.headline}>Categories</h2>
+                        {
+                            this.state.tribes.length > 0 ?
+                            <div>
+                            <AutoComplete
+                            floatingLabelText="Categories"
+                            searchText={this.state.searchTextCategory}
+                            onUpdateInput={this.handleUpdateInputCategory}
+                            fullWidth={true}                
+                            menuProps={menuProps}                                
+                            openOnFocus={true}
+                            dataSource={this.state.categories} />
+                            <FlatButton
+                                label="Add"
+                                primary={true}
+                                keyboardFocused={true}
+                                onClick={this.handleAddCategory}
                             />
-                            <Checkbox
-                            label="Pulseiras"
-                            style={styles.checkbox}
-                            labelStyle={styles.labelStyle} 
-                            />
-                            <Checkbox
-                            label="Colares"
-                            style={styles.checkbox}
-                            labelStyle={styles.labelStyle} 
-                            />
-                            <Checkbox
-                            label="Cocares"
-                            style={styles.checkbox}
-                            labelStyle={styles.labelStyle} 
-                            />
-                            <Checkbox
-                            label="Armamento"
-                            style={styles.checkbox}
-                            labelStyle={styles.labelStyle} 
-                            />
-                        </div>
+                            {this.state.selectedCategories.map((tribe) => 
+                                <Chip
+                                onRequestDelete={this.handleRequestDeleteCategory}
+                                onClick={this.handleTouchTap}
+                                style={styles.chip}>
+                                {tribe}
+                              </Chip>
+                            )} </div> : null
+                        }
+                    </div>
                         <div style={styles.block2}>
                             <h2 style={styles.headline}>Preços</h2>
                             <Slider value={this.state.firstSlider} onChange={this.handleFirstSlider} />

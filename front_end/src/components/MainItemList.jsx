@@ -5,6 +5,8 @@ import Avatar from 'material-ui/Avatar';
 import Product from './Product';
 import productAccess from '../actions/product';
 import tribeAccess from '../actions/tribes';
+import categoryAccess from '../actions/category';
+import selectedCategories from '../actions/category';
 
 class MainItemList extends Component {
     constructor(props) {
@@ -12,15 +14,23 @@ class MainItemList extends Component {
         this.state = {
             loading: false,
             products: [],
-            filter: [],
+            filtered_tribes: [],
+            filtered_categories: [],
         }
     }
 
     componentWillMount = () => {
         this.getProductList()
         tribeAccess.subscribe("tribe",(res) =>{
-            this.setState({filter : res})
-            productAccess.getFilteredProducts(res,(data) => {
+            this.setState({filtered_tribes : res})
+            productAccess.getFilteredProducts(res,this.state.filtered_categories,(data) => {
+                console.log(data.products)
+                this.setState({products : data.products})
+            })
+        })
+        categoryAccess.subscribe("category",(res) =>{
+            this.setState({filtered_categories : res})
+            productAccess.getFilteredProducts(this.state.filtered_tribes,res,(data) => {
                 console.log(data.products)
                 this.setState({products : data.products})
             })
@@ -28,7 +38,7 @@ class MainItemList extends Component {
     }
 
     getProductList = () => {
-        productAccess.getFilteredProducts(this.state.filter,(data) => {
+        productAccess.getFilteredProducts(this.state.filtered_tribes, this.state.filtered_categories,(data) => {
             console.log(data.products)
             this.setState({products : data.products})
         })
