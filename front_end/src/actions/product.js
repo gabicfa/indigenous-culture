@@ -11,6 +11,16 @@ export default window.product = {
         })
     },
 
+    getRecommendedTribe: (user_id, callback) => {
+        fetch('http://localhost:5000/r_tribe/' + user_id, {
+            method: 'GET',
+        }).then((response) => {
+            if (response.status == 200){
+                response.json().then((data) => {callback(data)})
+            }                                                    
+        })
+    },
+
     getFilteredProducts: (tribe, category, callback) => {
         fetch('http://localhost:5000/products', {
             method: 'POST',
@@ -30,25 +40,33 @@ export default window.product = {
         })
     },
 
-    getRecomendedProducts: (user_id, callback) => {
-        fetch('http://localhost:5000/r_products', {
+    getRecommendedProducts: (user_id,callback) => {
+        fetch('http://localhost:5000/r_products/'+user_id, {
             method: 'GET',
         }).then((response) => {
-            var product_list = []
-            if(response.status === 200){
-                let data = response.json().then((data) => {
-                data['products'].forEach(function (product_item) {
-                    var product = {
-                        product_id: product_item['product_id'],
-                        product_name: product_item['product_name'],
-                        product_tribe: product_item['product_tribe'],
-                        price: product_item['product_price'],
-                    }
-                    product_list.push(product);
-                })
-            })
-            }
-            callback(product_list)
+            if (response.status == 200){
+                response.json().then((data) => {callback(data)})
+            }                                                    
         })
-    }
+    },
+
+        declareInterest: (user_id, product_id, category_id, tribe_id, callback) => {
+            fetch('http://localhost:5000/di', {
+                method: 'POST',
+                body: JSON.stringify({
+                    user_id: user_id,
+                    product_id: product_id,
+                    category_id:category_id,
+                    tribe_id:tribe_id
+                }),
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Headers': 'Content-Type',
+                    'Access-Control-Allow-Methods': 'POST',
+                    'Content-Type': 'application/json',
+                }
+            }).then(res => {
+                callback(res)
+            }).catch(err => err);
+        },
 }

@@ -69,6 +69,13 @@ class SettingsMenu extends Component {
       };
     
     componentWillMount = () => {
+            tribeAccess.subscribe("tribe_filter", (value) => {
+            var selected_list = this.state.selectedTribes
+            selected_list.push(value)
+            this.setState({selectedTribes : selected_list})
+            tribeAccess.emitValue("tribe", this.state.selectedTribes)
+            // this.setState({searchTextTribe: ""})
+        })
         tribeAccess.getTribes((data) => {
             var tribe_list = []
             data.forEach((item) => {
@@ -133,21 +140,14 @@ class SettingsMenu extends Component {
             return (
                 <div>
                     <Card>
-                        <CardTitle title="Filters" subtitle={this.state.message} />
-                        <div className='toggle' style={styles.block}>
-                            <Toggle
-                            label="Activate"
-                            style={styles.toggle}
-                            labelStyle={styles.labelStyle}                            
-                            />
-                        </div>
+                        <CardTitle title="Filtros" subtitle={this.state.message} />
                         <div style={styles.block2}>
-                            <h2 style={styles.headline}>Tribes</h2>
+                            <h2 style={styles.headline}>Tribos</h2>
                             {
                                 this.state.tribes.length > 0 ?
                                 <div>
                                 <AutoComplete
-                                floatingLabelText="Tribes"
+                                floatingLabelText="Tribos"
                                 searchText={this.state.searchText}
                                 onUpdateInput={this.handleUpdateInputTribe}
                                 fullWidth={true}                
@@ -155,7 +155,7 @@ class SettingsMenu extends Component {
                                 openOnFocus={true}
                                 dataSource={this.state.tribes} />
                                 <FlatButton
-                                    label="Add"
+                                    label="Adicionar"
                                     primary={true}
                                     keyboardFocused={true}
                                     onClick={this.handleAddTribes}
@@ -171,12 +171,12 @@ class SettingsMenu extends Component {
                             }
                         </div>
                         <div style={styles.block2}>
-                        <h2 style={styles.headline}>Categories</h2>
+                        <h2 style={styles.headline}>Categorias</h2>
                         {
                             this.state.tribes.length > 0 ?
                             <div>
                             <AutoComplete
-                            floatingLabelText="Categories"
+                            floatingLabelText="Categorias"
                             searchText={this.state.searchTextCategory}
                             onUpdateInput={this.handleUpdateInputCategory}
                             fullWidth={true}                
@@ -184,7 +184,7 @@ class SettingsMenu extends Component {
                             openOnFocus={true}
                             dataSource={this.state.categories} />
                             <FlatButton
-                                label="Add"
+                                label="Adicionar"
                                 primary={true}
                                 keyboardFocused={true}
                                 onClick={this.handleAddCategory}
@@ -199,10 +199,6 @@ class SettingsMenu extends Component {
                             )} </div> : null
                         }
                     </div>
-                        <div style={styles.block2}>
-                            <h2 style={styles.headline}>Preços</h2>
-                            <Slider value={this.state.firstSlider} onChange={this.handleFirstSlider} />
-                        </div>
                     </Card>
                 </div>
             );

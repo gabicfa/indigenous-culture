@@ -11,7 +11,7 @@ const styles = {
       },
 }
 
-class Product extends Component {
+class RecommendedProduct extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -38,20 +38,16 @@ class Product extends Component {
                     actAsExpander={true}
                     showExpandableButton={true}
                     />
-                    <CardMedia expandable={true}>
-                        <div style={{height:"200"}}>
-                            <div className="row">
-                                <div className="col s12 m4 l5"><img src={require('../images/products/'+this.props.info.product_name+'.jpg')} alt="photo" style={{alignSelf:"left", height: "200", width: "350"}}/></div>
-                                <div className="col s12 m4 l7" style={{marginTop: -20}}><p>{this.props.info.tribe_description}</p></div>  
-                            </div>                          
-                        </div>
+                    <CardMedia>
+                            <img src={require('../images/products/'+this.props.info.product_name+'.jpg')} alt="photo" style={{alignSelf:"left", height: "200", width: "350"}}/>
                     </CardMedia>
                     <CardText expandable={true}>
                         <p>{this.props.info.description}</p>
                     </CardText>
                     <CardActions>
-                        <FlatButton backgroundColor="#a4c639" label="COMPRAR" onClick={this.handleBuy}/>
-                        <FlatButton disabled={true} label={ "R$" + this.props.info.product_price } />
+                        <FlatButton label={ "R$" + this.props.info.product_price } />
+                        <FlatButton label="VEJA MAIS"/>
+                        <FlatButton label="COMPRAR" onClick={this.handleBuy}/>
                     </CardActions>
                 </Card>
             </div>
@@ -59,4 +55,4 @@ class Product extends Component {
     }
 }
 
-export default Product;
+export default RecommendedProduct;

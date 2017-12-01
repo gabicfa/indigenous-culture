@@ -21,17 +21,6 @@ export default window.auth = {
                 'Content-Type': 'application/json',
             }
         }).then(res => {
-            if (res.status === 200) {
-                res.json().then((json) => {
-                    user = {
-                        id: json['id'],
-                        email: json['email'],
-                        name: json['name'],
-                    }
-                    localStorage.setItem('user', JSON.stringify(user));
-                    window.location.reload()
-                })
-            }
             callback(res)
         }).catch(err => err);
     },
@@ -51,24 +40,22 @@ export default window.auth = {
                 'Content-Type': 'application/json',
             }
         }).then((res) => {
-            if (res.status === 200) {
-                var json = res.json().then((json) => {
-                    console.log('[Auth] Register Successful ', json)
-                    user = {
-                        id: json['id'],
-                        email: json['email'],
-                        name: json['name'],
-                    }
-                    localStorage.setItem('user', JSON.stringify(user))
-                    window.location.reload()
-                })
-            } else {
-                console.log('[Auth] Register Failed ', json)
-            }
             callback(res)
         })
     },
 
+    getSavedUser: (callback) => {
+        let localStorageUser = localStorage.getItem('user')
+        if (localStorageUser) {
+            user = JSON.parse(localStorageUser)
+            console.log('[Auth] Retrieved user from last session', user)
+            callback(user)
+        }
+    },
+
+    getUser: () => {
+        return user
+    },
     logout: () => {
         localStorage.removeItem('user')
         window.location.reload()

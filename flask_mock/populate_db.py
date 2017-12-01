@@ -5,19 +5,16 @@ import unicodedata
 conn = ConnectionHelper()
 
 def read_file_items(file_name):
-    categories = {}
+    categories = []
     dict_value = None
     value = None
     with open(file_name) as f:
         while True:
             value = f.readline().strip()
             if value == "-":
-                dict_value = f.readline().strip()
-                categories[dict_value] = []
+                categories.append(f.readline().strip())
             elif value == ".":
                 break
-            else:
-                categories[dict_value].append(value)
     return categories
 
 def read_file_indians(file_name):
@@ -86,6 +83,8 @@ def delete_table_content(conn, delete_command):
 
 def populate_items(conn):
     #Deleting previous content
+    delete_table_content(conn,"DELETE FROM User_Category")
+    delete_table_content(conn,"DELETE FROM User_Tribe")
     delete_table_content(conn,"DELETE FROM Product_Category")
     delete_table_content(conn,"DELETE FROM Product_Tribe")
     delete_table_content(conn,"DELETE FROM Product")
@@ -93,10 +92,10 @@ def populate_items(conn):
     delete_table_content(conn,"DELETE FROM Tribe")
     
 
-    categories_dict = read_file_items("indian_items.txt")
-    print(categories_dict)
+    categories = read_file_items("indian_items.txt")
+    print(categories)
     category_list = []
-    for category in categories_dict.keys():
+    for category in categories:
         category_id = insert_category(conn, category) #insert categories
         category_list.append(get_id_by_name_category(conn,category))
 
@@ -109,17 +108,16 @@ def populate_items(conn):
         tribe_id = insert_tribe(conn, tribe, origin, state) #insert tribes
         tribe_list_ids.append(get_id_by_name_tribe(conn,tribe))
 
-    for category_id in category_list:
-        for product in categories_dict[category]:
-            for tribe_id in tribe_list_ids:
-                product_name = str(product + " " + tribe_list[tribe_list_ids.index(tribe_id)][0])
-                if get_id_by_name_product(conn, product_name) == None:
+    for product in categories:
+        for tribe_id in tribe_list_ids:
+            product_name = str(product + " " + tribe_list[tribe_list_ids.index(tribe_id)][0])
+            if randint(0,9) > 7:
+                print(product_name)
+                if get_id_by_name_product(conn, product_name) is None:
                     price = str(round(uniform(15.0, 100.0), 2))
                     insert_product(conn,product_name,price)
-                    #associate
-                    associate_table_category(conn, get_id_by_name_product(conn, product_name)[0], category_id)
+                    associate_table_category(conn, get_id_by_name_product(conn, product_name)[0], category_list[categories.index(product)])
                     associate_table_tribe(conn, get_id_by_name_product(conn, product_name)[0], tribe_id)
-
 
 if __name__ == "__main__":
     populate_items(conn)
