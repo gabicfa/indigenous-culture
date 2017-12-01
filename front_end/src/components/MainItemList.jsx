@@ -5,6 +5,7 @@ import Avatar from 'material-ui/Avatar';
 import Product from './Product';
 import productAccess from '../actions/product';
 import tribeAccess from '../actions/tribes';
+import Preloader from './Preloader';
 import categoryAccess from '../actions/category';
 import selectedCategories from '../actions/category';
 
@@ -12,7 +13,7 @@ class MainItemList extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            loading: false,
+            loading: true,
             products: [],
             filtered_tribes: [],
             filtered_categories: [],
@@ -39,22 +40,22 @@ class MainItemList extends Component {
 
     getProductList = () => {
         productAccess.getFilteredProducts(this.state.filtered_tribes, this.state.filtered_categories,(data) => {
-            console.log(data.products)
             this.setState({products : data.products})
+            this.setState({loading: false})           
         })
     }
 
     render() {
 
         const getItems = () => this.state.products.map((product) => {
-            return <Product name={product.product_name} tribe={product.tribe_name}/>
+            return <Product info={product} user={this.props.user}/>
         });
         
             return (
                 <div>
                     <Card>
-                        <CardTitle title="Recomended Products" subtitle={this.state.message} />
-                        { getItems() }
+                        <CardTitle title="Produtos" subtitle={this.state.message} />
+                        { this.state.loading ? <Preloader /> :  getItems()  }
                     </Card>
                 </div>
             );

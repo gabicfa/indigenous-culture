@@ -4,6 +4,7 @@ import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField'
 import RaisedButton from 'material-ui/RaisedButton';
 import auth from '../actions/auth.js'
+import emitter from '../actions/category';
 
 class Login extends Component {
   constructor(props) {
@@ -44,7 +45,11 @@ class Login extends Component {
   handleLogin = () => {
     auth.login(this.state.textFields.email, this.state.textFields.password, (result) => {
       if (result.status === 200) {
-        this.props.logged();
+        var data = result.json().then((val) => {
+          this.props.logged();
+          localStorage.setItem('user', JSON.stringify(val.user))
+          emitter.emitValue("login", JSON.stringify(val.user))
+        })
       } else {
         alert('User not found');
       }
@@ -65,7 +70,11 @@ class Login extends Component {
     }
     auth.register(this.state.textFields.email, this.state.textFields.name, this.state.textFields.password, (result) => {
       if (result.status === 200) {
-        this.props.logged();
+        var data = result.json().then((val) => {
+          this.props.logged();
+          localStorage.setItem('user', JSON.stringify(val.user))
+          emitter.emitValue("login", JSON.stringify(val.user))
+        })
       } else {
         alert('User already exists');
       }

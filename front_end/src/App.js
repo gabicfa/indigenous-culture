@@ -22,7 +22,7 @@ class App extends Component {
       }
 
 
-  loggedIn = () => {
+  loggedIn = (result) => {
         var localStorageUser = localStorage.getItem('user')
         if(localStorageUser){
           var user = JSON.parse(localStorageUser)
@@ -44,12 +44,12 @@ class App extends Component {
   }
 
   switchComponent = () => {
-    // switch(this.state.logged){
-      // case false:
-      //   return <Login logged={this.loggedIn}/>
-      // default:
+    switch(this.state.logged){
+      case false:
+        return <Login logged={this.loggedIn}/>
+      default:
         return <Menu/>
-    // }
+    }
   }
   
   render() {
