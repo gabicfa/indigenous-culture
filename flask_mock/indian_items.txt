@@ -13,7 +13,6 @@ Arma
 Machado
 Arco
 Borduna
-Diversos
 Lança
 Zarabatana
 -
@@ -35,7 +34,6 @@ Panela
 Prato
 Zoomorfa
 -
-Cesto
 Balaio
 Cesto Cargueiro
 Cesto com Tampa
@@ -43,17 +41,14 @@ Cesto de Pesca
 Cesto Decorado
 Cesto Liso
 -
-Colar
 Colar com Figuras de Animais
 Colar de Contas
 Colar de Miçangas
 Colar de Sementes
-Colares Diversos
 Várias Voltas de Contas
 Várias Voltas de Miçangas
 Várias Voltas de Sementes
 -
-Diversos
 Cuia
 Coité
 Cabaça
@@ -82,17 +77,13 @@ Maracá
 Pau de chuva
 Zunidor
 -
-Pulseira
 Pulseira de Contas
 Pulseira de Miçangas
 Pulseira de Sementes
-Pulseiras Diversas
 Pulseira para Bebês
 Pulseira Trançada
 -
 Trançados
-Diversos
 Esteira
 Peneira
-Preparação de Alimentos
 .
