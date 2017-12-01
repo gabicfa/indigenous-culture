@@ -1,36 +1,13 @@
-tribos = [
     {
         "name": "Apurinã",
 
+        "origin": "Aruák",
+
         "location":"Amazonas",
 
-        "description": "Os Apurinã vivem em diversas Terras Indígenas, sendo duas com os Paumari do Lago Paricá
-                        e Paumari do Lago Marahã, e uma com os índios Torá, na terra de mesmo nome. O território
-                        habitado pelos Apurinã, no século XIX, era o médio rio Purus – do rio Sepatini ou do rio
-                        Paciá ao Laco. Mas os Apurinã são um povo tradicionalmente migrante e, hoje, seu território
-                        se estende ao baixo rio Purus, até Rondônia. Há áreas Apurinã nos municípios Boca do Acre,
-                        Pauini, Lábrea, Tapauá, Manacapuru, Beruri, Manaquiri, Manicoré',todas no estado do Amazonas,
-                        além de índios Apurinã morando em várias cidades do país, e uma aldeia na Terra Indígena Roosevelt,
-                        dos índios Cinta-Larga, com quem alguns são casados.",
-        "extra": "Os primeiros pesquisadores, viajantes e missionários a percorrer o rio Purus, na segunda metade do
-                  século XIX, afirmavam que os Apurinã, ainda que morassem a alguma distância da beira do rio, vinham
-                  para as margens do Purus para pescar e apanhar tartarugas. Na época em que chegaram os não-índios,
-                  muitos Apurinã se refugiaram no alto de igarapés, e, outros, quando trabalharam em seringais,
-                  também moraram em locais insulados.Os ambientes do rio Purus influenciam muito o modo de vida do Apurinã.
-                  É importante a diferença entre terra firme e “vargem”, ou, entre partes alagáveis e não-alagáveis.
-                  As moradias mais “centrais”, ou seja, mais para o alto de igarapés, são sempre moradias de terra firme.
-                  Aquelas situadas na beira do rio são, por vezes, de terra firme, por vezes de vargem, já que o rio nem
-                  sempre alaga dos dois lados. Segundo Leôncio, cacique da comunidade do Km 124, as três comunidades, hoje
-                  localizadas na beira da estrada, originaram-se de três sobreviventes de um surto de sarampo, que dizimou
-                  a maloca existente na região. A sua mãe, Kamapã, foi uma das sobreviventes, e seu nome foi dado à atual
-                  aldeia do Km 124. Maen, outra sobrevivente, dá o nome à aldeia dos seus descendentes, na comunidade do km 137.
-                  É difícil estimar o número de índios Apurinã, e mesmo tratar deles de maneira genérica, porque estão muito espalhados.
-                  Segundo a Fundação Nacional da Saúde, os Apurinã somavam, em novembro em 2003, 4.057 indivíduos. Em 1996, só na região
-                  de Pauini havia nas Terras reconhecidas 1.114 habitantes (Relatório de Saúde/UNI) e cerca de 280 pessoas em terras a reconhecer
-                  (TIs Garaperi/Santa Vitória/Lago da Vitória/Capira, Baixo Seruini, Baixo Tumiã, Sãkoã/Santa Vitória e Mamoriá). Deve-se considerar,
-                  ainda, que muitos Apurinã moram fora das áreas reconhecidas, em comunidades ribeirinhas ou em cidades – Pauini, Lábrea, Tapauá,
-                  Rio Branco e Manaus são freqüentemente citadas –, e que muitos migraram para locais distantes como Rondônia e até Rio de Janeiro ou
-                  Minas Gerais.",
+        "description": "Os Apurinã vivem em diversas Terras Indígenas, sendo duas com os Paumari do Lago Paricáe Paumari do Lago Marahã, e uma com os índios Torá, na terra de mesmo nome. O território habitado pelos Apurinã, no século XIX, era o médio rio Purus – do rio Sepatini ou do rioPaciá ao Laco. Mas os Apurinã são um povo tradicionalmente migrante e, hoje, seu territóriose estende ao baixo rio Purus, até Rondônia.",
+
+        "extra": "Há áreas Apurinã nos municípios Boca do Acre,Pauini, Lábrea, Tapauá, Manacapuru, Beruri, Manaquiri, Manicoré',todas no estado do Amazonas,além de índios Apurinã morando em várias cidades do país, e uma aldeia na Terra Indígena Roosevelt,dos índios Cinta-Larga, com quem alguns são casados. Os primeiros pesquisadores, viajantes e missionários a percorrer o rio Purus, na segunda metade doséculo XIX, afirmavam que os Apurinã, ainda que morassem a alguma distância da beira do rio, vinhampara as margens do Purus para pescar e apanhar tartarugas. Na época em que chegaram os não-índios, muitos Apurinã se refugiaram no alto de igarapés, e, outros, quando trabalharam em seringais, também moraram em locais insulados.Os ambientes do rio Purus influenciam muito o modo de vida do Apurinã. É importante a diferença entre terra firme e “vargem”, ou, entre partes alagáveis e não-alagáveis. As moradias mais “centrais”, ou seja, mais para o alto de igarapés, são sempre moradias de terra firme. Aquelas situadas na beira do rio são, por vezes, de terra firme, por vezes de vargem, já que o rio nem sempre alaga dos dois lados. Segundo Leôncio, cacique da comunidade do Km 124, as três comunidades, hoje localizadas na beira da estrada, originaram-se de três sobreviventes de um surto de sarampo, que dizimou a maloca existente na região. A sua mãe, Kamapã, foi uma das sobreviventes, e seu nome foi dado à atual aldeia do Km 124. Maen, outra sobrevivente, dá o nome à aldeia dos seus descendentes, na comunidade do km 137. É difícil estimar o número de índios Apurinã, e mesmo tratar deles de maneira genérica, porque estão muito espalhados. Segundo a Fundação Nacional da Saúde, os Apurinã somavam, em novembro em 2003, 4.057 indivíduos. Em 1996, só na região de Pauini havia nas Terras reconhecidas 1.114 habitantes (Relatório de Saúde/UNI) e cerca de 280 pessoas em terras a reconhecer (TIs Garaperi/Santa Vitória/Lago da Vitória/Capira, Baixo Seruini, Baixo Tumiã, Sãkoã/Santa Vitória e Mamoriá). Deve-se considerar, ainda, que muitos Apurinã moram fora das áreas reconhecidas, em comunidades ribeirinhas ou em cidades – Pauini, Lábrea, Tapauá, Rio Branco e Manaus são freqüentemente citadas –, e que muitos migraram para locais distantes como Rondônia e até Rio de Janeiro ou Minas Gerais.",
 
         "products": [
 
@@ -38,23 +15,20 @@ tribos = [
             "name": "Pulseira Apurinã",
             "category": "Pulseira",
             "price": 25.00,
-            "description": "Material: contas esculpidas na casca do coquinho de tucum, jarina e inajá.
-                            Dimensões: 18cm (comprimento)"
+            "description": "Material: contas esculpidas na casca do coquinho de tucum, jarina e inajá. \n Dimensões: 18cm (comprimento)"
           },
           {
             "name": "Gargantilha Apurinã",
             "category": "Colares Diversos",
             "price": 30.00,
-            "description": "Material: contas esculpidas na casca do coquinho do tucum, inajá e jarina.
-                            Dimensões: 46cm"
+            "description": "Material: contas esculpidas na casca do coquinho do tucum, inajá e jarina. \n Dimensões: 46cm"
           },
           {
             "name": "Colar de Tucum Apurinã",
             "category": "Colares Diversos",
             "price": 45.00,
-            "description": "Material: contas esculpidas na casca do coquinho do tucum.
-                            Dimensões: 50cm"
-          },
+            "description": "Material: contas esculpidas na casca do coquinho do tucum. \n  Dimensões: 50cm"
+          }
         ]
     },
     {
@@ -62,24 +36,10 @@ tribos = [
 
         "location":"Amazonas",
 
-        "description": "Os índios Baré e Werekena (ou Warekena) vivem principalmente ao longo do
-                        Rio Xié e alto curso do Rio Negro, para onde grande parte deles migrou
-                        compulsoriamente em razão do contato com os não-índios, cuja história foi
-                        marcada pela violência e a exploração do trabalho extrativista.
-                        Oriundos da família lingüística aruak, hoje falam uma língua franca,
-                        o nheengatu, difundida pelos carmelitas no período colonial.
-                        Integram a área cultural conhecida como Noroeste Amazônico.",
-        "extra": "Os Baré vivem em sítios ou comunidades que compõe-se de um grupo de casas ou
-                  moradias construídas de pau-a-pique em redor um grande espaço, muitas vezes que
-                  dobra como o campo de futebol, com uma igreja católica ou evangélica, uma escolinha
-                  e talvez um posto médico (Meira 2002). As comunidades trabalham de outubro a fevereiro
-                  nas suas roças e na caça, pesca e coleta. Depois se deslocam para as barracas de
-                  piaçava por dois meses, entre maio a setembro, e cortem e processam a piaçava.
-                  A piaçava é entregue aos comerciantes para pagar as 'dívidas'. A piaçava e o cipó
-                  é o recurso principal para dar acesso aos produtos industrializados.
-                  Com a queda dos mercados para os produtos extrativos os maiores comerciantes
-                  desapareceram e os menores são indígenas e há uma tendencia de vender os produtos
-                  diretamente em São Gabriel da Cachoeira.",
+        "origin": "Nheengatu",
+
+        "description": "Os índios Baré e Werekena (ou Warekena) vivem principalmente ao longo do Rio Xié e alto curso do Rio Negro, para onde grande parte deles migrou compulsoriamente em razão do contato com os não-índios, cuja história foi marcada pela violência e a exploração do trabalho extrativista. Oriundos da família lingüística aruak, hoje falam uma língua franca, o nheengatu, difundida pelos carmelitas no período colonial. Integram a área cultural conhecida como Noroeste Amazônico.",
+        "extra": "Os Baré vivem em sítios ou comunidades que compõe-se de um grupo de casas ou moradias construídas de pau-a-pique em redor um grande espaço, muitas vezes que dobra como o campo de futebol, com uma igreja católica ou evangélica, uma escolinha e talvez um posto médico (Meira 2002). As comunidades trabalham de outubro a fevereiro nas suas roças e na caça, pesca e coleta. Depois se deslocam para as barracas de piaçava por dois meses, entre maio a setembro, e cortem e processam a piaçava. A piaçava é entregue aos comerciantes para pagar as 'dívidas'. A piaçava e o cipó é o recurso principal para dar acesso aos produtos industrializados. Com a queda dos mercados para os produtos extrativos os maiores comerciantes desapareceram e os menores são indígenas e há uma tendencia de vender os produtos diretamente em São Gabriel da Cachoeira.",
 
         "products": [
 
@@ -87,21 +47,234 @@ tribos = [
             "name": "Colar Baré",
             "category": "Colar Diversos",
             "price": 50.00,
-            "description": "Material: fibra de arumã
-                            Dimensões: 60cm (comprimento)"
+            "description": "Material: fibra de arumã \n Dimensões: 60cm (comprimento)"
           },
           {
-            "name": "",
-            "category": "",
-            "price": .00,
-            "description": ""
+            "name": "Sapo Cantor Baré",
+            "category": "Miniaturas de Animais",
+            "price": 20.00,
+            "description": "material: madeira \n dimensões: 7cm (comprimento) x 5cm (largura)"
+          }
+        ]
+    },
+    {
+        "name": "Guaranis",
+
+        "location":"RS/SC/PR/SP/RJ/MS",
+
+        "origin": "Tupi-Guarani",
+
+        "description": "Este povo vive em um território que compreende regiões no Brasil, Bolívia, Paraguai e Argentina e se diferencia internamente em diversos grupos muito semelhantes entre si, nos aspectos fundamentais de sua cultura e organizações sociopolíticas, porém, diferentes no modo de falar a língua guarani, de praticar sua religião e distintos no que diz respeito às tecnologias que aplicam na relação com o meio ambiente.",
+        "extra": "Os Guarani são conhecidos por distintos nomes: Chiripá, Kainguá, Monteses, Baticola, Apyteré, Tembekuá, entre outros. No entanto, sua autodenominação é Avá, que significa, em Guarani, “pessoa”. Este povo vive em um território que compreende regiões no Brasil, Bolívia, Paraguai e Argentina e se diferencia internamente em diversos grupos muito semelhantes entre si, nos aspectos fundamentais de sua cultura e organizações sociopolíticas, porém, diferentes no modo de falar a língua guarani, de praticar sua religião e distintos no que diz respeito às tecnologias que aplicam na relação com o meio ambiente. Tais diferenças, que podem ser consideradas pequenas do ponto de vista do não indígena, cumprem o papel de marcadores étnicos, distinguindo comunidades  políticas  exclusivas. Esses  grupos reconhecem a origem e proximidade histórica, linguística e cultural e, ao mesmo tempo, diferenciam-se entre si como forma de manter suas organizações sociopolíticas e econômicas.",
+
+        "products": [
+
+          {
+            "name": "Documentário Guarani",
+            "category": "DVD",
+            "price": 30.00,
+            "description": "Apesar de se considerarem os guardiões da floresta, os Guaranis Mbya, tradicionais  habitantes da Mata Atlântica têm sido acusados de destruí-la. Para defenderem-se  dessas acusações, um grupo de jovens indígenas da cidade de São Paulo resolveu  protestar e para isto elaborou uma carta-manifesto sobre o meio ambiente aberta à  sociedade e ao poder público. Este documentário retrata o processo de discussão e  construção deste instrumento nas várias aldeias e seus representantes e tem a missão de propagar seus efeitos dentro da própria comunidade indígena e em seus futuros encontros."
+          }
+        ]
+    },
+    {
+        "name": "Ikpeng",
+
+        "location":"Mato Grosso",
+
+        "origin": "Karib",
+
+        "description": "Os Ikpeng vieram para a região dos formadores do Xingu  no início do século XX, quando viviam em estado de guerra  com seus vizinhos alto-xinguanos. O contato com o mundo não  indígena foi ainda mais recente, no início da década de 60,  e teve conseqüências desastrosas para sua população, que foi  reduzida em menos da metade em razão de doenças e morte por  armas de fogo.",
+        "extra": "Foram então transferidos para os limites do Parque Indígena do Xingu  e “pacificados”. Hoje em dia mantém relações de aliança com as demais  aldeias do Parque, mas constituem uma sociedade bastante peculiar.  Já não guerreiam mais, contudo ainda mantém no cerne de sua visão de mundo  a guerra como motor não apenas da morte, mas de substituição dos mortos pela  incorporação do inimigo no seio do grupo, sendo assim também reprodutora da vida social.",
+
+        "products": [
+
+          {
+            "name": "Borduna Ikpeng",
+            "category": "Borduna",
+            "price": 180.00,
+            "description": "Material: madeira, algodão \n Dimensões: 95cm (comprimento)"
           },
           {
-            "name": "",
-            "category": "",
-            "price": .00,
-            "description": ""
+            "name": "Tipóia de Carregar Bebê Ikpeng",
+            "category": "Diverso",
+            "price": 180.00,
+            "description": "material: algodão \n Dimensões: 102cm (comprimento)"
+          }
+        ]
+    },
+    {
+        "name": "Kaxinawá",
+
+        "location":"Acre",
+
+        "origin": "Pano",
+
+        "description": "Os Kaxinawa constituem uma etnia indígena localizada na fronteira Brasil/Peru, nos estados do Acre e sul do Amazonas e no leste do Peru, e falam a língua da família Pano, com pequenas variações na cultura e no idioma entre diferentes tribos.",
+        "extra": "Os primeiros relatos de contatos com viajantes consideram que os rios Muru, Humaitá e Iboiçu, afluentes do Envira, que por sua vez é afluente do rio Juruá, como região de origem dos Kaxinawa. Desde o século XVII, colonizadores já realizavam incursões nessas regiões em busca de escravos. No fim do século XIX, as invasões tornaram-se freqüentes em decorrência da exploração da borracha, intensificando-se no começo do século XX, trazendo mudanças de costumes, doenças e, consequentemente, conflitos. Alguns grupos decidiram ao longo dos anos permanecerem reclusos na mata virgem, isolados do contato com o “homem branco”, enquanto outros acabaram usufruindo deste contanto e utilizando recursos como machados e espingardas no seu dia-a-dia. As atividades produtivas giram em torno da caça, da pesca, do plantio e da colheita. Plantam banana, mandioca, feijão, amendoim e algodão em roçados. A caça é realizada exclusivamente pelo homem, sendo aprendida desde a infância, e cercada de técnicas e rituais, como observar os hábitos de cada tipo de animal, reconhecer seus rastros e imitar seus sons. A pesca é feita tanto por homens quanto mulheres, usando principalmente o timbó, cipó venenoso, que quando diluído na água, mata os peixes e faz com que saltem na superfície, tornando mais fácil capturá-los.",
+        "products": [
+
+          {
+            "name": "Cumbuca Kaxinawá",
+            "category": "Cerâmica",
+            "price": 280.00,
+            "description": "material: cerâmica \n dimensões: 34cm (diâmetro) x 9cm (altura)"
           },
+          {
+            "name": "Saia Kaxinawá",
+            "category": "Saia",
+            "price": 470.00,
+            "description": "material: algodão \n dimensões: 70cm (cintura) x 52cm (comprimento)"
+          },
+          {
+            "name": "Testeira Kaxinawá",
+            "category": "Cabeça",
+            "price": 90.00,
+            "description": "material: algodão \n dimensões: 24cm (circunferência)"
+          }
+        ]
+    },
+    {
+        "name": "Kuikuro",
+
+        "location":"Mato Grosso",
+
+        "origin": "Karib",
+
+        "description": "Os Kuikuro são, hoje, o povo com a maior população no Alto Xingu. Eles constituem um sub-sistema carib com os outros grupos que falam variantes dialetais da mesma língua (Kalapalo, Matipu e Nahukuá) e participam do sistema multilíngüe conhecido como Alto Xingu, na porção sul da TI Parque Indígena do Xingu. ",
+        "extra": "Na história da formação deste sistema, os povos carib são considerados como tão importantes quanto os aruak (Waujá e Mehinako), embora se atribua aos aruak a sua matriz inicial. Nesta seção são dadas informações mais detalhadas sobre a língua, a história e outras características dos Kuikuro, produtores dos famosos colares e cintos de caramujo pelos quais continuam desempenhando seu papel específico no sistema tradicional de trocas e pagamentos do sistema alto-xinguano. Para outros aspectos culturais e sociais, como xamanismo, cosmologia e festas ou rituais, a seção Parque Indígena do Xingu apresenta elementos que se encontram também entre os Kuikuro.",
+
+        "products": [
+
+          {
+            "name": "Arco e Flecha Kuikuro",
+            "category": "Arco e Flecha",
+            "price": 45.00,
+            "description": "material: madeira, fibras \n dimensões: 101cm (comprimento), 85cm (comprimento)"
+          },
+          {
+            "name": "Bastão de Ritmo Kuikuro",
+            "category": "Instrumento Musical",
+            "price": 250.00,
+            "description": "material: fibras, madeira, linha de algodão \n dimensões: 76,5cm (comprimento) x 10cm (diâmetro)"
+          },
+          {
+            "name": "Banco Kuikuro",
+            "category": "Várias Voltas de Contas",
+            "price": 20000.00,
+            "description": "material: madeira \n dimensões: 103cm (comprimento) x 30cm (largura) x30cm(altura)"
+          },
+          {
+            "name": "Colar com 38 voltas Kuikuro",
+            "category": "Banco",
+            "price": 120.00,
+            "description": "material: miçangas \n dimensões: 100cm (comprimento)"
+          },
+          {
+            "name": "Flauta Kuikuro",
+            "category": "Instrumento Musical",
+            "price": 30.00,
+            "description": "material: bambu \n dimensões: 37cm (comprimento)"
+          },
+          {
+            "name": "Cuia Kuikuro",
+            "category": "Cuia",
+            "price": 35.00,
+            "description": "material: cabaça \n dimensões: 16cm (comprimento) x 12cm (largura)"
+          }
+        ]
+    }
+    {
+        "name": "Matis",
+
+        "location":"Amazonas",
+
+        "origin": "Pano",
+
+        "description": "Estimados em várias centenas na época dos primeiros contatos (no final dos anos 70), os Matis, falantes de uma língua Pano, não passavam de 87 em 1983. Nesse curto período, várias epidemias se espalharam pela região, afetando um enorme número de pessoas, especialmente crianças e idosos.",
+
+        "extra": "Os últimos meses de 1981 foram especialmente trágicos, tendo custado a vida de cerca de 48 Matis, levando os sobreviventes, traumatizados, a abandonar suas ocupações dispersas na floresta e a reagrupar-se em torno do Posto da Funai, às margens do rio Ituí, em busca de remédios. Passado alguns anos, as roças começaram a produzir normalmente, alguns rituais ressurgiram e houve um aumento populacional significativo. Contudo, ainda persiste o choque demográfico e psicológico decorrente de um contato mal empreendido e desnecessariamente mortífero. Atualmente, os Matis não vivem mais em uma única aldeia e assim retomam de modo tímido o antigo padrão de ocupação territorial.",
+
+        "products": [
+
+          {
+            "name": "Cumbuca Matis",
+            "category": "Cerâmica",
+            "price": 150.00,
+            "description": "material: cerâmica \n dimensões: 20cm (diâmetro)"
+          },
+          {
+            "name": "Bandoleira Matis",
+            "category": "Bandoleira",
+            "price": 75.00,
+            "description": "material: contas esculpidas em casca de coquinho de tucum e semente de inajá \n dimensões: 110cm (comprimento total)"
+          },
+          {
+            "name": "Mascara Matis",
+            "category": "Máscara",
+            "price": 920.00,
+            "description": "material: cerâmica \n dimensões: 22cm (altura) x 20cm (largura)"
+          },
+          {
+            "name": "Testeira Matis",
+            "category": "Cabeça",
+            "price": 85.00,
+            "description": "material: algodão \n dimensões: 49cm (circunferência)"
+          }
+        ]
+    },
+    {
+        "name": "Suruí-Paiter",
+
+        "location":"Rondônia",
+
+        "origin": "Mondé",
+
+        "description": "Desde o contato oficial, em 1969, a aproximação com os não índios trouxe profundas mudanças sociais entre os Paiter. Estas, entretanto, não anularam sua índole guerrreira, que motivou a luta desse povo pelo reconhecimento e a integridade de seu território. Este, ao longo da história, foi terrivelmente ameaçado pela violência do Polonoroeste, a corrupção e omissão de órgãos governamentais, a invasão de moradores indevidos e a incidência de madeireiras e mineradoras.",
+
+        "extra": "Lutando como podem contra essas adversidades, os Paiter procuram manter a vitalidade de suas tradições culturais, em que a sociedade é compreendida a partir de uma divisão em metades, de modo que os segmentos sociais, as atividades produtivas e a vida ritual constituem expressões do dualismo entre a aldeia e a mata, a roça e a caça, o trabalho e a festa - sendo as festas de troca de oferendas e os mutirões a elas associados os momentos culminantes do intercâmbio e da alternância entre essas metades.",
+
+        "products": [
+
+          {
+            "name": "Colar com 6 voltas Suruí-Paiter",
+            "category": "Várias Voltas de Contas",
+            "price": 215.00,
+            "description": "material: contas esculpidas em plástico e em casca de coquinhos. Dimensões: 84cm (comprimento por volta)"
+          },
+          {
+            "name": "Colar com 7 voltas Suruí-Paiter",
+            "category": "Várias Voltas de Contas",
+            "price": 210.00,
+            "description": "material: algodão. Dimensões: 42cm"
+          }
+        ]
+    },
+    {
+        "name": "Pankararu",
+
+        "location":"Pernambuco",
+
+        "origin": "Português",
+
+        "description": "Pankararus formam um grupo indígena brasileiro que vive nas proximidades da margem do rio São Francisco, em uma reserva indígena localizada entre os municípios de Tacaratu e Petrolândia, ambos no estado de Pernambuco. As terras do centro da reserva foram demarcadas em 1942, em Brejo dos Padres (pequeno vale de terras férteis que possui várias fontes de água). Assim como outros grupos na região Nordeste brasileira, apenas no começo da década de 90 os Pankararu tiveram sua identidade reconhecida pelo Estado, bem como a efetivação de suas terras.",
+
+        "extra": "A trajetória da tribo foi pontuada por diversos conflitos com grileiros e agricultores, que ainda não foram resolvidos. Além disso, existe um grande histórico de opressão e marginalização pela sociedade aos pankararus. Essa tribo apresenta em comum com os outros grupos indígenas o ritual religioso secreto do 'Toré'', marca de identidade e resistência cultural da tribo.",
+
+        "products": [
+
+          {
+            "name": "Cachimbo Pankaruru",
+            "category": "Cachimbo",
+            "price": 75.00,
+            "description": "material: madeira de jurema. Dimensões: 17,5cm (comprimento)"
+          },
+          {
+            "name": "DVD Promessa Pankaruru",
+            "category": "DVD",
+            "price": 18.00,
+            "description": "ano: 2008. Língua: Português"
+          }
         ]
     },
     {
@@ -109,7 +282,10 @@ tribos = [
 
         "location":"",
 
+        "origin": "",
+
         "description": "",
+
         "extra": "",
 
         "products": [
@@ -132,37 +308,11 @@ tribos = [
             "price": .00,
             "description": ""
           },
+          {
+            "name": "",
+            "category": "",
+            "price": .00,
+            "description": ""
+          }
         ]
     },
-    {
-        "name": "",
-
-        "location":"",
-
-        "description": "",
-        "extra": "",
-
-        "products": [
-
-          {
-            "name": "",
-            "category": "",
-            "price": .00,
-            "description": ""
-          },
-          {
-            "name": "",
-            "category": "",
-            "price": .00,
-            "description": ""
-          },
-          {
-            "name": "",
-            "category": "",
-            "price": .00,
-            "description": ""
-          },
-        ]
-    },
-
-]
