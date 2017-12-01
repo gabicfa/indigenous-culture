@@ -17,7 +17,7 @@ def get_user(conn, email):
 
 def get_product_by_id(conn, category_id):
     query = '''
-            SELECT p.id, p.name, p.price, t.id, t.name, c.id, c.name 
+            SELECT p.id, p.name, p.price, t.id, t.name, c.id, c.name, p.description
             FROM Product p, Product_Category pc, Product_Tribe pt, Tribe t, Category c
             WHERE p.id = pt.id_product AND
             t.id = pt.id_tribe AND
@@ -34,11 +34,12 @@ def get_product_by_id(conn, category_id):
     p["tribe_name"] = ans[4]
     p["category_id"] = ans[5]
     p["category_name"] = ans[6]
+    p["description"] = ans[7]
     return {"products": p}
 
 def get_tribe_by_id(conn, tribe_id):
     query = '''
-            SELECT t.id, t.name, t.origin, t.state
+            SELECT t.id, t.name, t.origin, t.state, t.description, t.extra_description
             FROM Tribe t WHERE t.id = %s
             '''
     ans = conn.run(query, tribe_id)
@@ -47,6 +48,8 @@ def get_tribe_by_id(conn, tribe_id):
     p["tribe_name"] = ans[1]
     p["tribe_origin"] = ans[2]
     p["tribe_state"] = ans[3]
+    p["description"] = ans[4]
+    p["extra_description"] = ans[5]
     return {"tribes": p}
 
 def declare_interest(conn, interest):
@@ -127,7 +130,7 @@ def get_recommended_tribe_table(conn):
 
 def get_products(conn, filters):
     query = '''
-            SELECT p.id, p.name, p.price, t.id, t.name, c.id, c.name 
+            SELECT p.id, p.name, p.price, t.id, t.name, c.id, c.name, p.description, t.description
             FROM Product p, Product_Category pc, Product_Tribe pt, Tribe t, Category c
             WHERE p.id = pt.id_product AND
             t.id = pt.id_tribe AND
@@ -167,6 +170,8 @@ def get_products(conn, filters):
         p["tribe_name"] = products[i][4]
         p["category_id"] = products[i][5]
         p["category_name"] = products[i][6]
+        p["description"] = products[i][7]
+        p["tribe_description"] = products[i][8]
         product_list.append(p)
     return {"products": product_list}
 

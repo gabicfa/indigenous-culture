@@ -4,7 +4,7 @@ from scipy.spatial.distance import cosine
 def getScore(history, similarities):
     return sum(history * similarities)/sum(similarities)
 
-def get_recommended_item(table, labels):
+def get_recommended_item(user_id,table, labels):
     df = pd.DataFrame.from_records(table, columns=labels)
     temp_df = df.drop('user', axis=1)
 
@@ -37,7 +37,7 @@ def get_recommended_item(table, labels):
     data_recommend.iloc[0:,0] = data_sims.iloc[:,0]
     for i in range(0,len(data_sims.index)):
         data_recommend.iloc[i,1:] = data_sims.iloc[i,:].sort_values(ascending=False).iloc[1:2,].index.transpose()
-    # print(data_recommend.iloc[:][:])
-    # recommended_item = data_recommend.loc[df['user'] == user_id]
-    # print(recommended_item["2"].values[0])
-    return df, data_recommend
+    print(data_recommend.iloc[:][:])
+    recommended_item = data_recommend.loc[df['user'] == user_id]
+    print(recommended_item["2"].values[0])
+    return recommended_item["1"].values[0]

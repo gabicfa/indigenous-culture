@@ -1,6 +1,8 @@
 from connection_helper import ConnectionHelper
 from random import uniform, randint
 import unicodedata
+import json
+from pprint import pprint
 
 conn = ConnectionHelper()
 
@@ -16,6 +18,11 @@ def read_file_items(file_name):
             elif value == ".":
                 break
     return categories
+
+def read_file_json(file_name):
+    with open(file_name) as json_data:
+        d = json.load(json_data)
+        return d
 
 def read_file_indians(file_name):
     value = None
@@ -57,10 +64,10 @@ def associate_table_category(conn, id_value1, id_value2):
     conn.run(query, args)
     return conn.connection.insert_id()
    
-def insert_product(conn, name, price):
-    query = "INSERT INTO Product(name, price) " \
-            "VALUES (%s, %s)"
-    args = (name, price)
+def insert_product(conn, name, price, description):
+    query = "INSERT INTO Product(name, price, description) " \
+            "VALUES (%s, %s, %s)"
+    args = (name, price, description)
     conn.run(query, args)
     return conn.connection.insert_id()
 
@@ -71,10 +78,10 @@ def insert_category(conn, name):
     conn.run(query, args)
     return conn.connection.insert_id()
 
-def insert_tribe(conn, name, origin, state):
-    query = "INSERT INTO Tribe(name, origin, state) " \
-            "VALUES (%s, %s, %s)"
-    args = (name, origin, state)
+def insert_tribe(conn, name, origin, state, desc, extra):
+    query = "INSERT INTO Tribe(name, origin, state, description, extra_description) " \
+            "VALUES (%s, %s, %s, %s, %s)"
+    args = (name, origin, state, desc, extra)
     conn.run(query, args)
     return conn.connection.insert_id()
 
@@ -91,7 +98,6 @@ def populate_items(conn):
     delete_table_content(conn,"DELETE FROM Category")
     delete_table_content(conn,"DELETE FROM Tribe")
     
-
     categories = read_file_items("indian_items.txt")
     print(categories)
     category_list = []
@@ -119,5 +125,38 @@ def populate_items(conn):
                     associate_table_category(conn, get_id_by_name_product(conn, product_name)[0], category_list[categories.index(product)])
                     associate_table_tribe(conn, get_id_by_name_product(conn, product_name)[0], tribe_id)
 
+def clear_item(item):
+    return ''.join((c for c in unicodedata.normalize('NFD', item) if unicodedata.category(c) != 'Mn'))
+
+def populate_items_online(conn):
+    delete_table_content(conn,"DELETE FROM User_Category")
+    delete_table_content(conn,"DELETE FROM User_Tribe")
+    delete_table_content(conn,"DELETE FROM Product_Category")
+    delete_table_content(conn,"DELETE FROM Product_Tribe")
+    delete_table_content(conn,"DELETE FROM Product")
+    delete_table_content(conn,"DELETE FROM Category")
+    delete_table_content(conn,"DELETE FROM Tribe")
+
+    d = read_file_json("produtos.json")
+    categories = []
+    print(d["tribos"])
+    for tribe in d["tribos"]:
+        print("here")
+        insert_tribe(conn, tribe["name"].encode('utf-8'), tribe["origin"].encode('utf-8'),tribe["location"].encode('utf-8'), tribe["description"].encode('utf-8'), tribe["extra"].encode('utf-8')) #insert tribes
+        tribe["tribe_id"] = get_id_by_name_tribe(conn,tribe["name"])
+        for product in tribe["products"]:
+            if product["category"] not in categories:
+                categories.append(product["category"])
+                insert_category(conn, product["category"].encode('utf-8')) #insert categories
+            product["category_id"] = get_id_by_name_category(conn,product["category"].encode('utf-8'))
+            insert_product(conn,product["name"].encode('utf-8'),product["price"], product["description"].encode('utf-8'))
+            product["product_id"] = get_id_by_name_product(conn, product["name"].encode('utf-8'))[0],
+            associate_table_category(conn, product["product_id"], product["category_id"])
+            associate_table_tribe(conn, product["product_id"], tribe["tribe_id"])
+
+    pprint(d)
+        
+
+
 if __name__ == "__main__":
-    populate_items(conn)
+    populate_items_online(conn)
