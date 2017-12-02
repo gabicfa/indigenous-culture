@@ -53,14 +53,14 @@
             "name": "Sapo Cantor Baré",
             "category": "Miniaturas de Animais",
             "price": 20.00,
-            "description": "material: madeira \n dimensões: 7cm (comprimento) x 5cm (largura)"
+            "description": "Material: madeira \n Dimensões: 7cm (comprimento) x 5cm (largura)"
           }
         ]
     },
     {
         "name": "Guaranis",
 
-        "location":"RS/SC/PR/SP/RJ/MS",
+        "location":"São Paulo",
 
         "origin": "Tupi-Guarani",
 
@@ -99,7 +99,7 @@
             "name": "Tipóia de Carregar Bebê Ikpeng",
             "category": "Diverso",
             "price": 180.00,
-            "description": "material: algodão \n Dimensões: 102cm (comprimento)"
+            "description": "Material: algodão \n Dimensões: 102cm (comprimento)"
           }
         ]
     },
@@ -118,19 +118,19 @@
             "name": "Cumbuca Kaxinawá",
             "category": "Cerâmica",
             "price": 280.00,
-            "description": "material: cerâmica \n dimensões: 34cm (diâmetro) x 9cm (altura)"
+            "description": "Material: cerâmica \n Dimensões: 34cm (diâmetro) x 9cm (altura)"
           },
           {
             "name": "Saia Kaxinawá",
             "category": "Saia",
             "price": 470.00,
-            "description": "material: algodão \n dimensões: 70cm (cintura) x 52cm (comprimento)"
+            "description": "Material: algodão \n Dimensões: 70cm (cintura) x 52cm (comprimento)"
           },
           {
             "name": "Testeira Kaxinawá",
             "category": "Cabeça",
             "price": 90.00,
-            "description": "material: algodão \n dimensões: 24cm (circunferência)"
+            "description": "Material: algodão \n Dimensões: 24cm (circunferência)"
           }
         ]
     },
@@ -150,37 +150,37 @@
             "name": "Arco e Flecha Kuikuro",
             "category": "Arco e Flecha",
             "price": 45.00,
-            "description": "material: madeira, fibras \n dimensões: 101cm (comprimento), 85cm (comprimento)"
+            "description": "Material: madeira, fibras \n Dimensões: 101cm (comprimento), 85cm (comprimento)"
           },
           {
             "name": "Bastão de Ritmo Kuikuro",
             "category": "Instrumento Musical",
             "price": 250.00,
-            "description": "material: fibras, madeira, linha de algodão \n dimensões: 76,5cm (comprimento) x 10cm (diâmetro)"
+            "description": "Material: fibras, madeira, linha de algodão \n Dimensões: 76,5cm (comprimento) x 10cm (diâmetro)"
           },
           {
             "name": "Banco Kuikuro",
             "category": "Várias Voltas de Contas",
             "price": 20000.00,
-            "description": "material: madeira \n dimensões: 103cm (comprimento) x 30cm (largura) x30cm(altura)"
+            "description": "Material: madeira \n Dimensões: 103cm (comprimento) x 30cm (largura) x30cm(altura)"
           },
           {
             "name": "Colar com 38 voltas Kuikuro",
             "category": "Banco",
             "price": 120.00,
-            "description": "material: miçangas \n dimensões: 100cm (comprimento)"
+            "description": "Material: miçangas \n Dimensões: 100cm (comprimento)"
           },
           {
             "name": "Flauta Kuikuro",
             "category": "Instrumento Musical",
             "price": 30.00,
-            "description": "material: bambu \n dimensões: 37cm (comprimento)"
+            "description": "Material: bambu \n Dimensões: 37cm (comprimento)"
           },
           {
             "name": "Cuia Kuikuro",
             "category": "Cuia",
             "price": 35.00,
-            "description": "material: cabaça \n dimensões: 16cm (comprimento) x 12cm (largura)"
+            "description": "Material: cabaça \n Dimensões: 16cm (comprimento) x 12cm (largura)"
           }
         ]
     }
@@ -201,25 +201,25 @@
             "name": "Cumbuca Matis",
             "category": "Cerâmica",
             "price": 150.00,
-            "description": "material: cerâmica \n dimensões: 20cm (diâmetro)"
+            "description": "Material: cerâmica \n Dimensões: 20cm (diâmetro)"
           },
           {
             "name": "Bandoleira Matis",
             "category": "Bandoleira",
             "price": 75.00,
-            "description": "material: contas esculpidas em casca de coquinho de tucum e semente de inajá \n dimensões: 110cm (comprimento total)"
+            "description": "Material: contas esculpidas em casca de coquinho de tucum e semente de inajá \n Dimensões: 110cm (comprimento total)"
           },
           {
             "name": "Mascara Matis",
             "category": "Máscara",
             "price": 920.00,
-            "description": "material: cerâmica \n dimensões: 22cm (altura) x 20cm (largura)"
+            "description": "Material: cerâmica \n Dimensões: 22cm (altura) x 20cm (largura)"
           },
           {
             "name": "Testeira Matis",
             "category": "Cabeça",
             "price": 85.00,
-            "description": "material: algodão \n dimensões: 49cm (circunferência)"
+            "description": "Material: algodão \n Dimensões: 49cm (circunferência)"
           }
         ]
     },
@@ -240,13 +240,13 @@
             "name": "Colar com 6 voltas Suruí-Paiter",
             "category": "Várias Voltas de Contas",
             "price": 215.00,
-            "description": "material: contas esculpidas em plástico e em casca de coquinhos. Dimensões: 84cm (comprimento por volta)"
+            "description": "Material: contas esculpidas em plástico e em casca de coquinhos. Dimensões: 84cm (comprimento por volta)"
           },
           {
             "name": "Colar com 7 voltas Suruí-Paiter",
             "category": "Várias Voltas de Contas",
             "price": 210.00,
-            "description": "material: algodão. Dimensões: 42cm"
+            "description": "Material: algodão. Dimensões: 42cm"
           }
         ]
     },
@@ -267,7 +267,7 @@
             "name": "Cachimbo Pankaruru",
             "category": "Cachimbo",
             "price": 75.00,
-            "description": "material: madeira de jurema. Dimensões: 17,5cm (comprimento)"
+            "description": "Material: madeira de jurema. Dimensões: 17,5cm (comprimento)"
           },
           {
             "name": "DVD Promessa Pankaruru",
@@ -278,41 +278,177 @@
         ]
     },
     {
-        "name": "",
+        "name": "Pataxó",
 
-        "location":"",
+        "location":"Bahia",
 
-        "origin": "",
+        "origin": "Português",
 
-        "description": "",
+        "description": "Como todos os outros povos indígenas do Brasil, a história dos Pataxós corresponde a um passado de muita luta, sofrimento, alegrias e conquistas, que transformaram a rica cultura dos índios baianos numa das tribos mais reconhecidas do nosso país. Localizados na Bahia e considerados um dos povos indígenas mais antigos do território brasileiro, os pataxós falavam originalmente a língua da família Maxacali, do tronco Macro-jê. Apesar de hoje em dia utilizarem o português como língua oficial, algumas palavras isoladas complementam seu vocabulário e ainda encontramos grupos cujo idioma original é preservado.",
 
-        "extra": "",
+        "extra": "Assim como diversos povos da região litorânea do Brasil que receberam os primeiros estrangeiros, os pataxós sempre foram guerreiros e desde os tempos do descobrimento lutam para firmar território e preservar sua identidade cultural e histórica. Em 1861, os pataxós foram alocados à força em uma Reserva de Barra Velha, junto com as tribos Maxacalis e Botucurus, de onde foram proibidos de sair. No decorrer do século XX, os pataxós sofreram muito com a aculturação, sendo marginalizados pela sociedade e sofrendo grande perda cultural nesse processo. No entanto, recentemente, o Supremo Tribunal Federal (STJ), reconheceu o direito dos Pataxós ao povoamento das terras da reserva Caramuru-Catarina-Paraguassu, anulando quaisquer títulos de propriedades que haviam sido concedidos a fazendeiros dentro dos limites territoriais dessa área, considerada indígena. A conquista dá fôlego às centenas de famílias puras e miscigenadas que vivem nas regiões e lutam diariamente pelas suas convicções e territórios de origem.",
 
         "products": [
 
           {
-            "name": "",
-            "category": "",
-            "price": .00,
-            "description": ""
+            "name": "Pulseira de Sementes Pataxó",
+            "category": "Pulseira de Sementes",
+            "price": 30.00,
+            "description": "Material: sementes de tento-carolina. Dimensões: 18cm (comprimento)"
+          }
+        ]
+    },
+    {
+        "name": "Sateré-Mawé",
+
+        "location":"Amazonas",
+
+        "origin": "Mawé",
+
+        "description": "São chamados regionalmente 'Mawés'. Ao longo de sua história, já receberam vários nomes, dados por cronistas, desbravadores dos sertões, missionários e naturalistas: Mavoz, Malrié, Mangnés, Mangnês, entre outros.Autodenominam-se Sateré-Mawé. O primeiro nome - Sateré - quer dizer 'lagarta de fogo', referência ao clã mais importante dentre os que compõem esta sociedade, aquele que indica tradicionalmente a linha sucessória dos chefes políticos. O segundo nome - Mawé - quer dizer 'papagaio inteligente e curioso' e não é designação clânica.",
+
+        "extra": "Segundo relatos dos velhos Sateré-Mawé, seus ancestrais habitavam em tempos imemoriais o vasto território entre os rios Madeira e Tapajós, delimitado ao norte pelas ilhas Tupinambaranas, no rio Amazonas e, ao sul, pelas cabeceiras do Tapajós. Os Sateré-Mawé referem-se ao seu lugar de origem como sendo o Noçoquém, lugar da morada de seus heróis míticos. Eles localizam-no na margem esquerda do Tapajós, numa região de floresta densa e pedregosa, 'lá onde as pedras falam'. Os Sateré-Mawé tiveram seu primeiro contato com os brancos na época de atuação da Companhia de Jesus, quando os jesuítas fundaram a Missão de Tupinambaranas, em 1669. Em 1692, após terem matado alguns homens brancos, o governo declarou uma guerra justa (legal) contra eles, parcialmente evitada pelos índios, uma vez que estes foram avisados e se espalharam, sendo que somente alguns ofereceram resistência.A partir do contato com os brancos, e mesmo antes disso, devido às guerras com os Munduruku e Parintintim, o território ancestral dos Sateré-Mawé foi sensivelmente reduzido. Em 1835 eclodiu a Cabanagem na Amazônia, principal insurreição nativista do Brasil. Os Munduruku e Mawé (dos rios Tapajós e Madeira) e os Mura (do rio Madeira), bem como grupos indígenas do rio Negro, aderiram aos cabanos e só se renderam em 1839. Epidemias e atroz perseguição aos grupos indígenas que com eles combatiam, devastaram enormes áreas da Amazônia, deslocando esses grupos dos seus territórios tradicionais ou reduzindo-os.",
+
+        "products": [
+
+          {
+            "name": " Canoa Sateré-Mawé",
+            "category": "Canoa",
+            "price": 30.00,
+            "description": "Material: madeira. Dimensões: 35cm (comprimento) x 7cm (largura)"
           },
           {
-            "name": "",
-            "category": "",
-            "price": .00,
-            "description": ""
+            "name": "Gargantilha Sateré-Mawé",
+            "category": "Colares Diversos",
+            "price": 60.00,
+            "description": "Material: semente de morototó. Dimensões:23cm"
           },
           {
-            "name": "",
-            "category": "",
-            "price": .00,
-            "description": ""
+            "name": "Coruja Sateré-Mawé",
+            "category": "Miniaturas de Animais",
+            "price": 28.00,
+            "description": "Material: madeira. Dimensões: 9cm (altura)"
           },
           {
-            "name": "",
-            "category": "",
-            "price": .00,
-            "description": ""
+            "name": "Pau de Chuva Sateré-Mawé",
+            "category": "Intrumento Musical",
+            "price": 85.00,
+            "description": "Material: madeira, fibra de palmeira, sementes, pedras. Dimensões: 82cm (comprimento total)"
+          },
+          {
+            "name": "Boneca Sateré-Mawé",
+            "category": "Boneca",
+            "price": 300.00,
+            "description": "Material: madeira. Dimensões: 43cm (altura)"
+          }
+        ]
+    },
+    {
+        "name": "Truká",
+
+        "location":"Pernambuco",
+
+
+        "origin": "Português",
+
+        "description": "Habitantes seculares da Ilha da Assunção, no rio São Francisco, os Truká tiveram suas terras apropriadas desde pelo menos o século XVIII por poderes municipais, eclesiásticos e posteriormente estaduais. Nos dias de hoje, a comunidade truká luta pela conclusão do processo de reconhecimento oficial de seu território, bem como pela expulsão de posseiros não-indígenas e de narcotraficantes, uma vez que está localizada no chamado “Polígono da Maconha” no sertão pernambucano.",
+
+        "extra": "Em meados dos anos 1940, com apoio e mediação dos Tuxá de Rodelas, os Truká passam a reivindicar junto ao SPI (Serviço de Proteção aos Índios, órgão antecessor da Funai) o reconhecimento de seus direitos fundiários sobre a ilha. O SPI consegue então instaurar uma Ação de Nulidade de Venda e Reintegração de Posse. Desde então os conflitos entre a comunidade indígena e os posseiros não-indígenas se acirraram, acarretando inclusive a morte de uma liderança truká. O estado de Pernambuco, ignorando a ação impetrada pelo SPI, compra então parte da ilha da Assunção para criar, em 1965, um núcleo de Colonização. O recrutamento de colonos não deu prioridade aos habitantes da ilha, atraindo pessoas de fora com lotes individualizados. Agravando ainda mais a situação da comunidade truká, no final da década de 60 um trecho da ilha foi apropriado por outro órgão estatal e convertido em viveiro de mudas. Com receio de serem expulsos e diante da exigüidade de terras para plantarem, os Truká retomaram o processo de reivindicação territorial, dessa vez junto à Funai. Em 1976, o órgão indigenista deslocou uma equipe (Portaria n. 876/P de 21/06/76) para averiguar a existência de “remanescentes indígenas” e avaliar sua situação fundiária.Nessa época, os Truká passaram a contar com apoio do Cimi (Conselho Indigenista Missionário, instituição da Igreja Católica) na veiculação de sua situação adversa em órgãos da imprensa local e regional. Depois de muito conflito, o trecho que vinha sendo utilizado como viveiro de mudas foi devolvido à comunidade.",
+
+        "products": [
+
+          {
+            "name": "Cachimbo Truká",
+            "category": "Cachimbo",
+            "price": 45.00,
+            "description": "Material: madeira. Dimensões: 11cm (comprimento)"
+          }
+        ]
+    },
+    {
+        "name": "Trumai",
+
+        "location":"Amazonas",
+
+        "origin": "Katukina",
+
+        "description": "Os Trumai são considerados o último grupo a ter chegado na área dos formadores do Rio Xingu, tendo atingido a região na primeira metade do século XIX. Atualmente habitam a área central do Parque Indígena do Xingu, porém culturalmente estão ligados ao complexo conhecido como Alto Xingu, cujos povos, apesar da diversidade lingüística, compartilham uma série de características culturais, estando articulados em uma rede de especializações comerciais e rituais inter-tribais.",
+
+        "extra": "Embora associados ao sistema alto-xinguano, os Trumai não são totalmente integrados a ele, apresentando particularidades que os diferenciam dos outros grupos da área. Todavia, o convívio com estes povos levou os Trumai a serem influenciados e a influenciar uma série de costumes alto-xinguanos no que diz respeito a rituais, à cultura Material e a atividades produtivas.",
+
+        "products": [
+
+          {
+            "name": "Banco de Pássaro Trumai",
+            "category": "Banco",
+            "price": 1800.00,
+            "description": "Material: madeira. Dimensões: 110cm (comprimento) 39cm (largura) x 38cm (altura)"
+          },
+          {
+            "name": "Pássaro Trumai",
+            "category": "Miniaturas de Animais",
+            "price": 60.00,
+            "description": "Material: madeira. Dimensões: 49cm (comprimento) x 11cm (altura)"
+          },
+          {
+            "name": "Pulseira Trumai",
+            "category": "Pulseira de Miçangas",
+            "price": 60.00,
+            "description": "Material: miçangas. Dimensões: 16cm (comprimento) x 3,5cm(largura)"
+          },
+          {
+            "name": "Cesto de Pesca Trumai",
+            "category": "Cesto de Pesca",
+            "price": 75.00,
+            "description": "Material: fibras, linha de algodão. Dimensões: 33cm (comprimento) x 28cm(largura) x 15cm(altura)"
+          }
+        ]
+    },
+    {
+        "name": "Kayapó",
+
+        "location":"Pará",
+
+        "origin": "Jê",
+
+        "description": "Os Kayapó vivem em aldeias dispersas ao longo do curso superior dos rios Iriri, Bacajá, Fresco e de outros afluentes do caudaloso rio Xingu, desenhando no Brasil Central um território quase tão grande quanto a Áustria. É praticamente recoberto pela floresta equatorial, com exceção da porção oriental, preenchida por algumas áreas de cerrado.",
+
+        "extra": "A cosmologia, vida ritual e organização social desse povo são extremamente ricas e complexas; assim como são intensas e ambivalentes as relações com a sociedade nacional e com ambientalistas do mundo todo. No século XIX os Kayapó estavam divididos em três grandes grupos, os Irã'ãmranh-re ('os que passeiam nas planícies'), os Goroti Kumrenhtx ('os homens do verdadeiro grande grupo') e os Porekry ('os homens dos pequenos bambus'). Destes, descendem os sete subgrupos kayapó atuais: Gorotire, Kuben-Krân-Krên, Kôkraimôrô, Kararaô, Mekrãgnoti, Metyktire e Xikrin.",
+
+        "products": [
+
+          {
+            "name": "Brinco de Miçanga Kayapó",
+            "category": "Brinco de Miçanga",
+            "price": 20.00,
+            "description": "Material: miçangas. Dimensões: 5m (comprimento) x 3cm (largura)"
+          },
+          {
+            "name": "Grafismo Kayapó",
+            "category": "Grafismo",
+            "price": 150.00,
+            "description": "Material: tecido de algodão. Dimensões: 59cm (comprimento) x 34cm (largura)"
+          }
+        ]
+    },
+    {
+        "name": "Waimiri-Atroari",
+
+        "location":"Amazonas",
+
+        "origin": "Karib",
+
+        "description": "Os Waimiri Atroari, durante muito tempo, estiveram presentes no imaginário do povo brasileiro como um povo guerreiro, que enfrentava e matava a todos que tentavam entrar em seu território. Essa imagem contribuiu para que autoridades governamentais transferissem a incumbência das obras da rodovia BR 174 (Manaus-Boa Vista) ao Exército Brasileiro, que utilizou de forças militares repressivas para conter os indígenas.",
+
+        "extra": "Esse enfrentamento culminou na quase extinção do povo kinja (autodenominação waimiri atroari). A interferência em suas terras ainda foi agravada devido a instalação de uma empresa mineradora e o alagamento de parte de seu território pela construção de uma hidrelétrica. Mas os Waimiri Atroari enfrentaram a situação, negociaram com os brancos e hoje têm assegurados os limites de sua terra, o vigor de sua cultura e o crescimento de sua gente.",
+
+        "products": [
+
+          {
+            "name": "Bolsa de Fibra Waimiri-Atroari",
+            "category": "Bolsa de Fibra",
+            "price": 70.00,
+            "description": "Material: fibras de caroá. Dimensões: 16cm x 14cm (corpo da bolsa) x 124cm (alça) "
           }
         ]
     },
