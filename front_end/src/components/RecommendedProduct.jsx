@@ -28,10 +28,6 @@ class RecommendedProduct extends Component {
     }
 
     handleBuy = () => {
-        accessProduct.declareInterest(this.props.user.id,this.props.info.product_id,
-                                        this.props.info.category_id,this.props.info.tribe_id, (res) => {
-                                            console.log(res)
-                                        })
         this.handleClosePay()
         this.handleClosePaymentDone()
     }
@@ -52,6 +48,10 @@ class RecommendedProduct extends Component {
     };
 
     handleOpenPay = () => {
+        accessProduct.declareInterest(this.props.user.id,this.props.info.product_id,
+            this.props.info.category_id,this.props.info.tribe_id, (res) => {
+                console.log(res)
+            })
         this.setState({open_pay: true});
       };
 
@@ -187,7 +187,7 @@ class RecommendedProduct extends Component {
                 <Card>
                     <CardHeader
                     title={ this.props.info.product_name }
-                    subtitle={this.props.info.tribe_name }
+                    subtitle={this.props.recommendation}
                     actAsExpander={true}
                     showExpandableButton={true}
                     />

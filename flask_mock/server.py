@@ -134,18 +134,18 @@ def get_recommended_product_by_product(user_id):
         return dumps(recommended_product), 200
 
 @app.route('/most_purchased', methods=['GET'])
-def get_most_purchased(user_id):
+def get_most_purchased():
     if request.method == 'GET':
         conn = ConnectionHelper()
         table, labels = dao.get_recommended_products_table(conn)
         purchases_list = []
-        total = 0
         for column in range(1,len(table[0])):
+            total = 0
             for row in range(len(table)):
                 total += table[row][column]
             purchases_list.append(total)
         purchase_number = max(purchases_list)
-        labels.delete(0)
+        labels.pop(0)
         recommended_item_id = labels[purchases_list.index(purchase_number)]
         recommended_product = dao.get_product_by_product_id(conn, recommended_item_id)
         return dumps(recommended_product), 200

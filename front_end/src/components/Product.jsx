@@ -34,6 +34,10 @@ class Product extends Component {
     }
 
     handleBuy = () => {
+        accessProduct.declareInterest(this.props.user.id,this.props.info.product_id,
+            this.props.info.category_id,this.props.info.tribe_id, (res) => {
+                console.log(res)
+            })
         this.handleClosePay()
         this.handleClosePaymentDone()
     }
@@ -54,10 +58,6 @@ class Product extends Component {
     };
 
     handleOpenPay = () => {
-        accessProduct.declareInterest(this.props.user.id,this.props.info.product_id,
-                                        this.props.info.category_id,this.props.info.tribe_id, (res) => {
-                                            console.log(res)
-                                        })
         this.setState({open_pay: true});
       };
 

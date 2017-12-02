@@ -67,7 +67,7 @@ class Tribe extends Component {
                     <CardHeader
                     title={ this.props.info.tribe_name }
                     subtitle={"Tronco Linguístico " + this.props.info.tribe_origin +  " - Estado: " + this.props.info.tribe_state}
-                    avatar={require("../images/amazonas.jpg")}
+                    avatar={require("../images/flags/"+this.props.info.tribe_state+".png")}
                     />
                     <CardMedia>
                         <img src={require('../images/tribes/'+this.props.info.tribe_name+'.jpg')} alt="photo" />
