@@ -40,8 +40,26 @@ export default window.product = {
         })
     },
 
-    getRecommendedProducts: (user_id,callback) => {
+    getRecommendedMost: (user_id,callback) => {
+        fetch('http://localhost:5000/most_purchased', {
+            method: 'GET',
+        }).then((response) => {
+            if (response.status == 200){
+                response.json().then((data) => {callback(data)})
+            }                                                    
+        })
+    },
+    getRecommendedByProduct: (user_id,callback) => {
         fetch('http://localhost:5000/r_products/'+user_id, {
+            method: 'GET',
+        }).then((response) => {
+            if (response.status == 200){
+                response.json().then((data) => {callback(data)})
+            }                                                    
+        })
+    },
+    getRecommendedByCategory: (user_id,callback) => {
+        fetch('http://localhost:5000/r_categories/'+user_id, {
             method: 'GET',
         }).then((response) => {
             if (response.status == 200){

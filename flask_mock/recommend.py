@@ -39,5 +39,7 @@ def get_recommended_item(user_id,table, labels):
         data_recommend.iloc[i,1:] = data_sims.iloc[i,:].sort_values(ascending=False).iloc[1:2,].index.transpose()
     print(data_recommend.iloc[:][:])
     recommended_item = data_recommend.loc[df['user'] == user_id]
+    print(recommended_item["1"].values[0])
     print(recommended_item["2"].values[0])
+    print(recommended_item["3"].values[0])
     return recommended_item["1"].values[0]

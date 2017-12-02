@@ -24,11 +24,11 @@ class Menu extends Component {
             return (
                 <div className="row">
                     <div className="col s12 m4 l2"><SettingsMenu /></div>
-                    <div className="col s12 m4 l7"><MainItemList user={this.state.user}/></div>
+                    <div className="col s12 m4 l7">
+                        <RecommendedProducts user={this.state.user}/>
+                        <MainItemList user={this.state.user}/></div>
                     <div className="col s12 m4 l3">
                         <RecommendedTribe user={this.state.user}/>
-                        <br/>
-                        <RecommendedProducts user={this.state.user}/>
                     </div>
                 </div>
             );

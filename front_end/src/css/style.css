@@ -19,7 +19,8 @@
 }
 
 .nav-wrapper{
-    background-color: #0c6d2f;
+    background-color: rgb(64,104,60);
+    height: 100
 }
 
 .redTab {
@@ -37,5 +38,8 @@
 }
 
 .brand-logo{
-    margin-left: 10%,
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    font-size: 60;
+    color: white
 }

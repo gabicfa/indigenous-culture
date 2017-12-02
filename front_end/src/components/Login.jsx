@@ -94,12 +94,12 @@ class Login extends Component {
       return (
         <div className='card-login'>
           <Card>
-            <CardTitle title="Register" subtitle="Enter our platform" />
+            <CardTitle title="Registrar" subtitle="Inscreva-se na plataform" />
             <div className="login-input">
               <TextField
                 fullWidth
                 id="name"
-                floatingLabelText="Name"
+                floatingLabelText="Nome"
                 type="text"
                 value={this.state.textFields.name}
                 onChange={this.handleTextChange}
@@ -117,7 +117,7 @@ class Login extends Component {
               <TextField
                 fullWidth
                 id="password"
-                floatingLabelText="Password"
+                floatingLabelText="Senha"
                 type="password"
                 value={this.state.textFields.password}
                 onChange={this.handleTextChange}
@@ -126,7 +126,7 @@ class Login extends Component {
               <TextField
                 fullWidth
                 id="confirm_password"
-                floatingLabelText="Confirm Password"
+                floatingLabelText="Confirmar Senha"
                 type="password"
                 value={this.state.textFields.confirm_password}
                 onChange={this.handleTextChange}
@@ -135,11 +135,11 @@ class Login extends Component {
             </div>
             <CardActions>]
                 <RaisedButton
-                label="REGISTER"
+                label="CADASTRE-SE"
                 primary={true}
                 onClick={this.handleRegister} />
               <FlatButton
-                label="Already Have an account?"
+                label="Já é cadastrado?"
                 onClick={this.switchDialogContent}
               />
             </CardActions>
@@ -150,7 +150,7 @@ class Login extends Component {
       return (
         <div className='card-login'>
           <Card>
-            <CardTitle title="Login" subtitle="Enter our platform" />
+            <CardTitle title="Login" subtitle="Entre na plataforma" />
             <div className="login-input">
               <TextField
                 fullWidth
@@ -163,11 +163,11 @@ class Login extends Component {
               <TextField
                 fullWidth
                 id="password"
-                floatingLabelText="Password"
+                floatingLabelText="Senha"
                 type="password"
                 value={this.state.textFields.password}
                 onChange={this.handleTextChange}
-                errorText={this.state.textFields.password.length < 6 && this.state.textFields.password.length > 1 ? "Password too short" : null}
+                errorText={this.state.textFields.password.length < 6 && this.state.textFields.password.length > 1 ? "Senha muito curta" : null}
               />
             </div>
             <CardActions>
@@ -176,7 +176,7 @@ class Login extends Component {
                 primary={true}
                 onClick={this.handleLogin} />
               <FlatButton
-                label="REGISTER"
+                label="CADASTRE-SE"
                 onClick={this.switchDialogContent}
               />
             </CardActions>

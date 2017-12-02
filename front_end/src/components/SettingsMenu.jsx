@@ -199,6 +199,7 @@ class SettingsMenu extends Component {
                             )} </div> : null
                         }
                     </div>
+                    <br/>
                     </Card>
                 </div>
             );

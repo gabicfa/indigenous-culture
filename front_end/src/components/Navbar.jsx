@@ -35,7 +35,7 @@ class Navbar extends Component {
 
     logout = () => {
         localStorage.removeItem('user');
-        this.setState({user: null});
+        this.setState({user: null})
         this.props.loggedOut();
     }
 
@@ -45,8 +45,7 @@ class Navbar extends Component {
                 <nav>
                     <div className="nav-wrapper">
                         <a className="brand-logo center">
-                        <img src={require('../images/brasil.png')} alt="photo" height="48" width="48" />
-                        AMAZÔNIA 
+                        <img src={require('../images/logo.jpeg')} alt="photo" height="63" width="150" />
                         </a>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             {this.state.user === null ? null :

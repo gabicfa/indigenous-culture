@@ -1,3 +1,4 @@
+from random import choice
 def create_user(conn, name, password, email):
     query = "INSERT INTO User(name, password, email)" +\
             "VALUES (%s, %s, %s)"
@@ -15,7 +16,7 @@ def get_user(conn, email):
     user["email"] = ans[3]
     return user
 
-def get_product_by_id(conn, category_id):
+def get_product_by_category_id(conn, category_id):
     query = '''
             SELECT p.id, p.name, p.price, t.id, t.name, c.id, c.name, p.description
             FROM Product p, Product_Category pc, Product_Tribe pt, Tribe t, Category c
@@ -24,6 +25,29 @@ def get_product_by_id(conn, category_id):
             p.id = pc.id_product AND
             c.id = pc.id_category AND
             c.id = %s
+            '''
+    allans = conn.runall(query, category_id)
+    ans = choice(allans)
+    p = {}
+    p["product_id"] = ans[0]
+    p["product_name"] = ans[1]
+    p["product_price"] = ans[2]
+    p["tribe_id"] = ans[3]
+    p["tribe_name"] = ans[4]
+    p["category_id"] = ans[5]
+    p["category_name"] = ans[6]
+    p["description"] = ans[7]
+    return {"products": p}
+
+def get_product_by_product_id(conn, category_id):
+    query = '''
+            SELECT p.id, p.name, p.price, t.id, t.name, c.id, c.name, p.description
+            FROM Product p, Product_Category pc, Product_Tribe pt, Tribe t, Category c
+            WHERE p.id = pt.id_product AND
+            t.id = pt.id_tribe AND
+            p.id = pc.id_product AND
+            c.id = pc.id_category AND
+            p.id = %s
             '''
     ans = conn.run(query, category_id)
     p = {}
@@ -61,10 +85,19 @@ def declare_interest(conn, interest):
             "VALUES (%s, %s)"
     args = (interest["user_id"], interest["category_id"])
     conn.run(query, args)
+    query = "INSERT INTO User_Product(id_user, id_product)" +\
+            "VALUES (%s, %s)"
+    args = (interest["user_id"], interest["product_id"])
+    conn.run(query, args)
     return get_interest_category(conn)
 
 def get_categories_ids(conn):
     query = 'SELECT id FROM Category'
+    ans = conn.runall(query)
+    return ans
+
+def get_products_ids(conn):
+    query = 'SELECT id FROM Product'
     ans = conn.runall(query)
     return ans
 
@@ -88,7 +121,33 @@ def get_interest_category(conn):
     ans = conn.runall(query)
     return ans
 
+def get_interest_product(conn):
+    query = 'SELECT * FROM User_Product'
+    ans = conn.runall(query)
+    return ans
+
 def get_recommended_products_table(conn):
+    products = list(get_products_ids(conn))
+    users = list(get_users_ids(conn))
+    interest = list(get_interest_product(conn))
+    products = [x[0] for x in products]
+    users = [x[0] for x in users]
+    final = []
+    for user in users:
+        final.append([0]*(len(products)))
+        final[-1].insert(0,user)
+    # final.insert(0, products)
+
+    for user_id, product_id in interest:
+        products_pos = products.index(product_id) + 1
+        user_pos = users.index(user_id)
+        final[user_pos][products_pos] = 1
+
+    products.insert(0, "user")
+    return final, products
+
+
+def get_recommended_category_table(conn):
     categories = list(get_categories_ids(conn))
     users = list(get_users_ids(conn))
     interest = list(get_interest_category(conn))
@@ -130,7 +189,7 @@ def get_recommended_tribe_table(conn):
 
 def get_products(conn, filters):
     query = '''
-            SELECT p.id, p.name, p.price, t.id, t.name, c.id, c.name, p.description, t.description
+            SELECT p.id, p.name, p.price, t.id, t.name, c.id, c.name, p.description, t.description, t.extra_description
             FROM Product p, Product_Category pc, Product_Tribe pt, Tribe t, Category c
             WHERE p.id = pt.id_product AND
             t.id = pt.id_tribe AND
@@ -172,6 +231,7 @@ def get_products(conn, filters):
         p["category_name"] = products[i][6]
         p["description"] = products[i][7]
         p["tribe_description"] = products[i][8]
+        p["tribe_extra_description"] = products[i][9]
         product_list.append(p)
     return {"products": product_list}
 

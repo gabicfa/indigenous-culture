@@ -12,6 +12,7 @@ class RecommendedTribe extends Component {
         super(props);
         this.state = {
             loading: true,
+            
             other: false,
             message: '',
             tribes: [],
@@ -43,6 +44,7 @@ class RecommendedTribe extends Component {
                         <div className='recipesItems'>
                             { this.state.loading ? <Preloader /> :  getItems()  }
                         </div>
+                        <br/>
                     </Card>
                 </div>
             );

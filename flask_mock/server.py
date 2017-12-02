@@ -115,13 +115,39 @@ def get_category():
         category = dao.get_category(conn)
         return dumps(category), 200
 
+@app.route('/r_categories/<int:user_id>', methods=['GET'])
+def get_recommended_product_by_category(user_id):
+    if request.method == 'GET':
+        conn = ConnectionHelper()
+        table, labels = dao.get_recommended_category_table(conn)
+        recommended_item_id = recommend.get_recommended_item(user_id,table, labels)
+        recommended_product = dao.get_product_by_category_id(conn, recommended_item_id)
+        return dumps(recommended_product), 200
+
 @app.route('/r_products/<int:user_id>', methods=['GET'])
-def get_recommended_products(user_id):
+def get_recommended_product_by_product(user_id):
     if request.method == 'GET':
         conn = ConnectionHelper()
         table, labels = dao.get_recommended_products_table(conn)
         recommended_item_id = recommend.get_recommended_item(user_id,table, labels)
-        recommended_product = dao.get_product_by_id(conn, recommended_item_id)
+        recommended_product = dao.get_product_by_product_id(conn, recommended_item_id)
+        return dumps(recommended_product), 200
+
+@app.route('/most_purchased', methods=['GET'])
+def get_most_purchased(user_id):
+    if request.method == 'GET':
+        conn = ConnectionHelper()
+        table, labels = dao.get_recommended_products_table(conn)
+        purchases_list = []
+        total = 0
+        for column in range(1,len(table[0])):
+            for row in range(len(table)):
+                total += table[row][column]
+            purchases_list.append(total)
+        purchase_number = max(purchases_list)
+        labels.delete(0)
+        recommended_item_id = labels[purchases_list.index(purchase_number)]
+        recommended_product = dao.get_product_by_product_id(conn, recommended_item_id)
         return dumps(recommended_product), 200
 
 @app.route('/r_tribe/<int:user_id>', methods=['GET'])

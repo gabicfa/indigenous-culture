@@ -21,7 +21,15 @@ class RecommendedProducts extends Component {
     }
     
     getProductList = () => {
-        productAccess.getRecommendedProducts(this.props.user.id,(data) => {
+        productAccess.getRecommendedMost(this.props.user.id,(data) => {
+            this.setState({products : [data.products]})
+            this.setState({loading: false})
+        })
+        productAccess.getRecommendedByCategory(this.props.user.id,(data) => {
+            this.setState({products : [data.products]})
+            this.setState({loading: false})
+        })
+        productAccess.getRecommendedByProduct(this.props.user.id,(data) => {
             this.setState({products : [data.products]})
             this.setState({loading: false})
         })
@@ -38,7 +46,15 @@ class RecommendedProducts extends Component {
                     <Card>
                         <CardTitle title="Produtos Recomendados" subtitle={this.state.message} />
                         <div className='recipesItems'>
-                            { this.state.loading ? <Preloader /> :  getItems()  }
+                        <div className="row">
+                    <div className="col s12 m4 l4">{ this.state.loading ? <Preloader /> :  getItems()  }</div>
+                    <div className="col s12 m4 l4">
+                    { this.state.loading ? <Preloader /> :  getItems()  }
+                    </div>
+                    <div className="col s12 m4 l4">
+                    { this.state.loading ? <Preloader /> :  getItems()  }
+                    </div>
+                    </div>    
                         </div>
                     </Card>
                 </div>
