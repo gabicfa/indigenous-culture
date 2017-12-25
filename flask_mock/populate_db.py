@@ -131,6 +131,7 @@ def clear_item(item):
 def populate_items_online(conn):
     delete_table_content(conn,"DELETE FROM User_Category")
     delete_table_content(conn,"DELETE FROM User_Tribe")
+    delete_table_content(conn,"DELETE FROM User_Product")
     delete_table_content(conn,"DELETE FROM Product_Category")
     delete_table_content(conn,"DELETE FROM Product_Tribe")
     delete_table_content(conn,"DELETE FROM Product")

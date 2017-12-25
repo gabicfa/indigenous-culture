@@ -40,13 +40,13 @@ class RecommendedProducts extends Component {
     render() {
 
         const getItems = () => this.state.products.map((product) => {
-            return <RecommendedProduct info={product} user={this.props.user} recommendation={"Recomendação por produto"}/>
+            return <RecommendedProduct info={product} user={this.props.user} recommendation={"Recomendação produto"}color={false}/>
         });
         const getCatItems = () => this.state.cat_products.map((product) => {
-            return <RecommendedProduct info={product} user={this.props.user} recommendation={"Recomendação por categoria"}/>
+            return <RecommendedProduct info={product} user={this.props.user} recommendation={"Recomendação categoria"}color={false}/>
         });
         const getMostItems = () => this.state.most_products.map((product) => {
-            return <RecommendedProduct info={product} user={this.props.user} recommendation={"MAIS VENDIDO!"}/>
+            return <RecommendedProduct info={product} user={this.props.user} recommendation={"MAIS VENDIDO!"} color={true}/>
         });
 
             return (

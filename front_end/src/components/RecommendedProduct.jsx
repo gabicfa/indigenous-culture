@@ -6,12 +6,17 @@ import Dialog from 'material-ui/Dialog';
 import Avatar from 'material-ui/Avatar';
 import TextField from 'material-ui/TextField';
 import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton';
+import Chip from 'material-ui/Chip';
+import {blue300, indigo900} from 'material-ui/styles/colors';
 
 const styles = {
     block: {
         maxWidth: 1000,
         marginLeft: "10px",
         marginRight: "10px"
+      },
+      chip: {
+        margin: 4,
       },
 }
 
@@ -28,6 +33,10 @@ class RecommendedProduct extends Component {
     }
 
     handleBuy = () => {
+        accessProduct.declareInterest(this.props.user.id,this.props.info.product_id,
+            this.props.info.category_id,this.props.info.tribe_id, (res) => {
+                console.log(res)
+            })
         this.handleClosePay()
         this.handleClosePaymentDone()
     }
@@ -48,10 +57,6 @@ class RecommendedProduct extends Component {
     };
 
     handleOpenPay = () => {
-        accessProduct.declareInterest(this.props.user.id,this.props.info.product_id,
-            this.props.info.category_id,this.props.info.tribe_id, (res) => {
-                console.log(res)
-            })
         this.setState({open_pay: true});
       };
 
@@ -187,7 +192,11 @@ class RecommendedProduct extends Component {
                 <Card>
                     <CardHeader
                     title={ this.props.info.product_name }
-                    subtitle={this.props.recommendation}
+                    subtitle={<Chip
+                        backgroundColor={this.props.color?"#EDC115":null}
+                        style={styles.chip}>
+                        {this.props.recommendation}
+                      </Chip>}
                     actAsExpander={true}
                     showExpandableButton={true}
                     />

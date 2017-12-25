@@ -77,18 +77,27 @@ def get_tribe_by_id(conn, tribe_id):
     return {"tribes": p}
 
 def declare_interest(conn, interest):
-    query = "INSERT INTO User_Tribe(id_user, id_tribe)" +\
-            "VALUES (%s, %s)"
-    args = (interest["user_id"], interest["tribe_id"])
-    conn.run(query, args)
-    query = "INSERT INTO User_Category(id_user, id_category)" +\
-            "VALUES (%s, %s)"
-    args = (interest["user_id"], interest["category_id"])
-    conn.run(query, args)
-    query = "INSERT INTO User_Product(id_user, id_product)" +\
-            "VALUES (%s, %s)"
-    args = (interest["user_id"], interest["product_id"])
-    conn.run(query, args)
+    try:
+        query = "INSERT INTO User_Tribe(id_user, id_tribe)" +\
+                "VALUES (%s, %s)"
+        args = (interest["user_id"], interest["tribe_id"])
+        conn.run(query, args)
+    except:
+        pass
+    try:
+        query = "INSERT INTO User_Category(id_user, id_category)" +\
+                "VALUES (%s, %s)"
+        args = (interest["user_id"], interest["category_id"])
+        conn.run(query, args)
+    except:
+        pass
+    try:
+        query = "INSERT INTO User_Product(id_user, id_product)" +\
+                "VALUES (%s, %s)"
+        args = (interest["user_id"], interest["product_id"])
+        conn.run(query, args)
+    except:
+        pass
     return get_interest_category(conn)
 
 def get_categories_ids(conn):
