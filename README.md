@@ -1,10 +1,10 @@
 # Indian Culture
 
-##The marketplace for native brazilian crafts, art and much more.
+## The marketplace for native brazilian crafts, art and much more.
 
 Project designed for the Social-Networks discipline in the Computer Engineering program @ Insper
 
-##The issue
+## The issue
 
 This project was developed with the goal of integrating the Indian and Native Brazilian population, which represents only 0.7% of its original size, to modern society. Even though the integration has increased, as native Brazilians have graduated renomated universities and found jobs in modern society this integration process often obligates this populations to give up their origins and traditions. In order to earn a living, indians who don't have the rare opportunity of college, have been pushed to lower income jobs and forced to work extra to maintain livable standards in modern society while losing touch with their roots.
 
