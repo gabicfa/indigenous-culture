@@ -1,4 +1,4 @@
-# Indian Culture
+# Indigenous culture
 
 ## The marketplace for native brazilian crafts, art and much more.
 
